@@ -1,0 +1,115 @@
+﻿@model FreshersPool1.Models.CA_PersonalData
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CA_PersonalData</legend>
+
+    <div class="display-label">CandidateID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CandidateID)
+    </div>
+
+    <div class="display-label">FirstName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+
+    <div class="display-label">MiddleName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MiddleName)
+    </div>
+
+    <div class="display-label">LastName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">Title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">Gender</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Gender)
+    </div>
+
+    <div class="display-label">DateOfBirth</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateOfBirth)
+    </div>
+
+    <div class="display-label">FatherName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FatherName)
+    </div>
+
+    <div class="display-label">Category</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Category)
+    </div>
+
+    <div class="display-label">YearsofExperience</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.YearsofExperience)
+    </div>
+
+    <div class="display-label">CurrentLocation</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CurrentLocation)
+    </div>
+
+    <div class="display-label">Login</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Login)
+    </div>
+
+    <div class="display-label">Password</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Password)
+    </div>
+
+    <div class="display-label">PrimaryEmail</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PrimaryEmail)
+    </div>
+
+    <div class="display-label">SecondaryEmail</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SecondaryEmail)
+    </div>
+
+    <div class="display-label">MobileNo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MobileNo)
+    </div>
+
+    <div class="display-label">LandlineNo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LandlineNo)
+    </div>
+
+    <div class="display-label">ApplicationDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ApplicationDate)
+    </div>
+
+    <div class="display-label">MotherTongue</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MotherTongue)
+    </div>
+
+    <div class="display-label">UniversityID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UniversityID)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

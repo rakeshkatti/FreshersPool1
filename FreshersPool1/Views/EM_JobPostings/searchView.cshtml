@@ -1,0 +1,70 @@
+﻿@model IEnumerable<FreshersPool1.Models.EM_JobPostings>
+
+@{
+    ViewBag.Title = "searchView";
+}
+
+<h2>Search Results</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Employer
+        </th>
+        <th>
+            Role/Designation
+        </th>
+        <th>
+            StreamID
+        </th>
+        <th>
+            JobTitle
+        </th>
+        <th>
+            JobDescription
+        </th>
+        <th>
+            DriveType
+        </th>
+        <th>
+            CityName
+        </th>
+        <th>
+            Date
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EM_EmployerData.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MS_RoleMaster.RoleDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StreamID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriveType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CityName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+    </tr>
+}
+
+</table>

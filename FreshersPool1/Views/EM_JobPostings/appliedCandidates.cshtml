@@ -1,0 +1,94 @@
+﻿@model IEnumerable<FreshersPool1.Models.EM_JobPostings>
+
+@{
+    ViewBag.Title = "appliedCandidates";
+}
+
+<h2>appliedCandidates</h2>
+
+<table>
+    <tr>
+        <th>
+            JobID
+        </th>
+        <th>
+            EmployerID
+        </th>
+        <th>
+            RoleID
+        </th>
+        <th>
+            StreamID
+        </th>
+        <th>
+            JobTitle
+        </th>
+        <th>
+            JobDescription
+        </th>
+        <th>
+            DriveType
+        </th>
+        <th>
+            Location
+        </th>
+        <th>
+            CityID
+        </th>
+        <th>
+            CityName
+        </th>
+        <th>
+            Date
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    if (item.EmployerID.Equals(Session["EmployerID"]))
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoleID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StreamID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriveType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CityID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CityName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.ActionLink("ViewApplied", "ViewApplied", new {  id=item.JobID })
+        </td>
+    </tr>
+    }
+    else{
+           @Html.Display("You have No jobs!");
+    }
+}
+
+</table>

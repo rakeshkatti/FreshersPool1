@@ -1,0 +1,33 @@
+﻿@model FreshersPool1.Models.CA_Skills
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>CA_Skills</legend>
+
+    <div class="display-label">CA_PersonalData</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CA_PersonalData.FirstName)
+    </div>
+
+    <div class="display-label">MS_SkillMaster</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_SkillMaster.SkillDesc)
+    </div>
+
+    <div class="display-label">MS_SkillLevelMaster</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_SkillLevelMaster.SkillDesc)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

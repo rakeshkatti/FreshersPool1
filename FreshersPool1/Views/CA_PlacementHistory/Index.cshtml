@@ -1,0 +1,75 @@
+﻿@model IEnumerable<FreshersPool1.Models.CA_PlacementHistory>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            CandidateID
+        </th>
+        <th>
+            JobID
+        </th>
+        <th>
+            EmployerID
+        </th>
+        <th>
+            MS_DriveMaster
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            DrivePlace
+        </th>
+        <th>
+            MS_ResultMaster
+        </th>
+        <th>
+            Remarks
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CandidateID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmployerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MS_DriveMaster.DriveType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DrivePlace)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MS_ResultMaster.Result)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remarks)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

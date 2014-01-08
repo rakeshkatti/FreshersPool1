@@ -1,0 +1,55 @@
+﻿@model FreshersPool1.Models.CA_PlacementHistory
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CA_PlacementHistory</legend>
+
+    <div class="display-label">CandidateID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CandidateID)
+    </div>
+
+    <div class="display-label">JobID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.JobID)
+    </div>
+
+    <div class="display-label">EmployerID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmployerID)
+    </div>
+
+    <div class="display-label">MS_DriveMaster</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_DriveMaster.DriveType)
+    </div>
+
+    <div class="display-label">Date</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Date)
+    </div>
+
+    <div class="display-label">DrivePlace</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DrivePlace)
+    </div>
+
+    <div class="display-label">MS_ResultMaster</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_ResultMaster.Result)
+    </div>
+
+    <div class="display-label">Remarks</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Remarks)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

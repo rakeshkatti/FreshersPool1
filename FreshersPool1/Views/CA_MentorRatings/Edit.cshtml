@@ -1,0 +1,113 @@
+﻿@model FreshersPool1.Models.CA_MentorRatings
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>CA_MentorRatings</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CandidateID, "CA_PersonalData")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("CandidateID", String.Empty)
+            @Html.ValidationMessageFor(model => model.CandidateID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TestID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TestID)
+            @Html.ValidationMessageFor(model => model.TestID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Personality)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Personality)
+            @Html.ValidationMessageFor(model => model.Personality)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Communication)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Communication)
+            @Html.ValidationMessageFor(model => model.Communication)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ConfidenceLevels)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ConfidenceLevels)
+            @Html.ValidationMessageFor(model => model.ConfidenceLevels)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.English)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.English)
+            @Html.ValidationMessageFor(model => model.English)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.GeneralAptitude)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.GeneralAptitude)
+            @Html.ValidationMessageFor(model => model.GeneralAptitude)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AnalyticalAbilities)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AnalyticalAbilities)
+            @Html.ValidationMessageFor(model => model.AnalyticalAbilities)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MentorRemarks1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MentorRemarks1)
+            @Html.ValidationMessageFor(model => model.MentorRemarks1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MentorRemarks2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MentorRemarks2)
+            @Html.ValidationMessageFor(model => model.MentorRemarks2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MentorRemarks3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MentorRemarks3)
+            @Html.ValidationMessageFor(model => model.MentorRemarks3)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

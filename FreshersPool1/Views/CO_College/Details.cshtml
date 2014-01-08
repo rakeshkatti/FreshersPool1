@@ -1,0 +1,110 @@
+﻿@model FreshersPool1.Models.CO_College
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CO_College</legend>
+
+    <div class="display-label">CollegeID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CollegeID)
+    </div>
+
+    <div class="display-label">CollegeName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CollegeName)
+    </div>
+
+    <div class="display-label">CollegeCode</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CollegeCode)
+    </div>
+
+    <div class="display-label">CollegeEmail</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CollegeEmail)
+    </div>
+
+    <div class="display-label">Website</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Website)
+    </div>
+
+    <div class="display-label">YearStarted</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.YearStarted)
+    </div>
+
+    <div class="display-label">TpoName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TpoName)
+    </div>
+
+    <div class="display-label">TpoMobile</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TpoMobile)
+    </div>
+
+    <div class="display-label">TpoEmail</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TpoEmail)
+    </div>
+
+    <div class="display-label">CollegePhone</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CollegePhone)
+    </div>
+
+    <div class="display-label">Status</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status)
+    </div>
+
+    <div class="display-label">Login</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Login)
+    </div>
+
+    <div class="display-label">Password</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Password)
+    </div>
+
+    <div class="display-label">AddressLine1</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AddressLine1)
+    </div>
+
+    <div class="display-label">AddressLine2</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AddressLine2)
+    </div>
+
+    <div class="display-label">City</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">State</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.State)
+    </div>
+
+    <div class="display-label">Pin</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Pin)
+    </div>
+
+    <div class="display-label">CollegeLogo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CollegeLogo)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

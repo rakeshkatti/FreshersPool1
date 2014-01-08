@@ -1,0 +1,69 @@
+﻿@model FreshersPool1.Models.EM_JobPostings
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<fieldset>
+    <legend>EM_JobPostings</legend>
+
+    <div class="display-label">JobID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.JobID)
+    </div>
+
+    <div class="display-label">EmployerID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmployerID)
+    </div>
+
+    <div class="display-label">RoleID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.RoleID)
+    </div>
+
+    <div class="display-label">StreamID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StreamID)
+    </div>
+
+    <div class="display-label">JobTitle</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.JobTitle)
+    </div>
+
+    <div class="display-label">JobDescription</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.JobDescription)
+    </div>
+
+    <div class="display-label">DriveType</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DriveType)
+    </div>
+
+    <div class="display-label">Location</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Location)
+    </div>
+
+    <div class="display-label">CityID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CityID)
+    </div>
+
+    <div class="display-label">CityName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CityName)
+    </div>
+
+    <div class="display-label">Date</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Date)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,85 @@
+﻿@model IEnumerable<FreshersPool1.Models.EM_JobPostings>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link rel="stylesheet" href="../css/foundation.css">
+
+<table>
+    <tr>
+        <th>
+            @*StreamID*@Stream
+        </th>
+        <th>
+            JobTitle
+        </th>
+        <th>
+            JobDescription
+        </th>
+        <th>
+            DriveType
+        </th>
+        <th>
+            Location
+        </th>
+        <th>
+            CityID
+        </th>
+        <th>
+            CityName
+        </th>
+        <th>
+            Date
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StreamID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriveType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CityName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @if (Session["applied"+item.JobID]==null)
+            {
+                <a data-reveal-id="myModal" data-reveal-ajax="true" >
+                  @Html.ActionLink("Apply", "Apply", new {id=item.JobID})
+                </a> 
+            <div id="myModal" class="reveal-modal"></div>
+            }
+        </td>
+    </tr>
+}
+    
+    <script>
+        
+        $('#myModal').foundation('reveal', 'open', {
+            url: '../CA_PersonalData',
+            success: function (data) {
+                alert('modal data loaded');
+            },
+            error: function () {
+                alert('failed loading modal');
+            }
+        });
+    </script>
+
+
+
+</table>

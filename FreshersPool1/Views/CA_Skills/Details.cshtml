@@ -1,0 +1,30 @@
+﻿@model FreshersPool1.Models.CA_Skills
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CA_Skills</legend>
+
+    <div class="display-label">CA_PersonalData</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CA_PersonalData.FirstName)
+    </div>
+
+    <div class="display-label">MS_SkillMaster</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_SkillMaster.SkillDesc)
+    </div>
+
+    <div class="display-label">MS_SkillLevelMaster</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_SkillLevelMaster.SkillDesc)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

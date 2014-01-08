@@ -1,0 +1,33 @@
+﻿@model FreshersPool1.Models.EM_JobPostings_Shortlistings
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>EM_JobPostings_Shortlistings</legend>
+
+    <div class="display-label">EM_JobPostings</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EM_JobPostings.EmployerID)
+    </div>
+
+    <div class="display-label">CA_PersonalData</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CA_PersonalData.FirstName)
+    </div>
+
+    <div class="display-label">MS_ResultMaster</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_ResultMaster.Result)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

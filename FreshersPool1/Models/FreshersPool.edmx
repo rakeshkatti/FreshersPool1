@@ -1,0 +1,1700 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Team2_FRESHERSPOOLModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="Team2_FRESHERSPOOLModelStoreContainer">
+          <EntitySet Name="CA_Academics" EntityType="Team2_FRESHERSPOOLModel.Store.CA_Academics" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CA_JobPreferences" EntityType="Team2_FRESHERSPOOLModel.Store.CA_JobPreferences" store:Type="Tables" store:Schema="dbo" store:Name="CA_JobPreferences">
+            <DefiningQuery>SELECT 
+      [CA_JobPreferences].[CandidateID] AS [CandidateID], 
+      [CA_JobPreferences].[SignBond] AS [SignBond], 
+      [CA_JobPreferences].[NightShifts] AS [NightShifts], 
+      [CA_JobPreferences].[Relocate] AS [Relocate], 
+      [CA_JobPreferences].[RelocationCity1] AS [RelocationCity1], 
+      [CA_JobPreferences].[RelocationCity2] AS [RelocationCity2], 
+      [CA_JobPreferences].[RelocationCity3] AS [RelocationCity3], 
+      [CA_JobPreferences].[RelocationCity4] AS [RelocationCity4]
+      FROM [dbo].[CA_JobPreferences] AS [CA_JobPreferences]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CA_Languages" EntityType="Team2_FRESHERSPOOLModel.Store.CA_Languages" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CA_MentorRatings" EntityType="Team2_FRESHERSPOOLModel.Store.CA_MentorRatings" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CA_PersonalData" EntityType="Team2_FRESHERSPOOLModel.Store.CA_PersonalData" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CA_PlacementHistory" EntityType="Team2_FRESHERSPOOLModel.Store.CA_PlacementHistory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CA_ProfessionalCourses" EntityType="Team2_FRESHERSPOOLModel.Store.CA_ProfessionalCourses" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CA_RolePreferences" EntityType="Team2_FRESHERSPOOLModel.Store.CA_RolePreferences" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CA_Skills" EntityType="Team2_FRESHERSPOOLModel.Store.CA_Skills" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CO_College" EntityType="Team2_FRESHERSPOOLModel.Store.CO_College" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EM_EmployerData" EntityType="Team2_FRESHERSPOOLModel.Store.EM_EmployerData" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EM_JobPostings" EntityType="Team2_FRESHERSPOOLModel.Store.EM_JobPostings" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EM_JobPostings_Shortlistings" EntityType="Team2_FRESHERSPOOLModel.Store.EM_JobPostings_Shortlistings" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EM_JobPostings_Skillset" EntityType="Team2_FRESHERSPOOLModel.Store.EM_JobPostings_Skillset" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MS_CityMaster" EntityType="Team2_FRESHERSPOOLModel.Store.MS_CityMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MS_DriveMaster" EntityType="Team2_FRESHERSPOOLModel.Store.MS_DriveMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MS_LanguageMaster" EntityType="Team2_FRESHERSPOOLModel.Store.MS_LanguageMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MS_ResultMaster" EntityType="Team2_FRESHERSPOOLModel.Store.MS_ResultMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MS_RoleMaster" EntityType="Team2_FRESHERSPOOLModel.Store.MS_RoleMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MS_SkillLevelMaster" EntityType="Team2_FRESHERSPOOLModel.Store.MS_SkillLevelMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MS_SkillMaster" EntityType="Team2_FRESHERSPOOLModel.Store.MS_SkillMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MS_StreamMaster" EntityType="Team2_FRESHERSPOOLModel.Store.MS_StreamMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="Team2_FRESHERSPOOLModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_CA_Academics_CA_PersonalData" Association="Team2_FRESHERSPOOLModel.Store.FK_CA_Academics_CA_PersonalData">
+            <End Role="CA_PersonalData" EntitySet="CA_PersonalData" />
+            <End Role="CA_Academics" EntitySet="CA_Academics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Academics_CO_College1 Grad" Association="Team2_FRESHERSPOOLModel.Store.FK_CA_Academics_CO_College1 Grad">
+            <End Role="CO_College" EntitySet="CO_College" />
+            <End Role="CA_Academics" EntitySet="CA_Academics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Academics_CO_College2 Inter" Association="Team2_FRESHERSPOOLModel.Store.FK_CA_Academics_CO_College2 Inter">
+            <End Role="CO_College" EntitySet="CO_College" />
+            <End Role="CA_Academics" EntitySet="CA_Academics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Academics_MS_StreamMaster" Association="Team2_FRESHERSPOOLModel.Store.FK_CA_Academics_MS_StreamMaster">
+            <End Role="MS_StreamMaster" EntitySet="MS_StreamMaster" />
+            <End Role="CA_Academics" EntitySet="CA_Academics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Academics_MS_StreamMaster1" Association="Team2_FRESHERSPOOLModel.Store.FK_CA_Academics_MS_StreamMaster1">
+            <End Role="MS_StreamMaster" EntitySet="MS_StreamMaster" />
+            <End Role="CA_Academics" EntitySet="CA_Academics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Academics_MS_StreamMaster2" Association="Team2_FRESHERSPOOLModel.Store.FK_CA_Academics_MS_StreamMaster2">
+            <End Role="MS_StreamMaster" EntitySet="MS_StreamMaster" />
+            <End Role="CA_Academics" EntitySet="CA_Academics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Languages_CA_Languages" Association="Team2_FRESHERSPOOLModel.Store.FK_CA_Languages_CA_Languages">
+            <End Role="MS_LanguageMaster" EntitySet="MS_LanguageMaster" />
+            <End Role="CA_Languages" EntitySet="CA_Languages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Languages_CA_PersonalData" Association="Team2_FRESHERSPOOLModel.Store.FK_CA_Languages_CA_PersonalData">
+            <End Role="CA_PersonalData" EntitySet="CA_PersonalData" />
+            <End Role="CA_Languages" EntitySet="CA_Languages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_MentorRatings_CA_PersonalData" Association="Team2_FRESHERSPOOLModel.Store.FK_CA_MentorRatings_CA_PersonalData">
+            <End Role="CA_PersonalData" EntitySet="CA_PersonalData" />
+            <End Role="CA_MentorRatings" EntitySet="CA_MentorRatings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_PersonalData_CA_PersonalData" Association="Team2_FRESHERSPOOLModel.Store.FK_CA_PersonalData_CA_PersonalData">
+            <End Role="MS_LanguageMaster" EntitySet="MS_LanguageMaster" />
+            <End Role="CA_PersonalData" EntitySet="CA_PersonalData" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_PlacementHistory_MS_DriveMaster" Association="Team2_FRESHERSPOOLModel.Store.FK_CA_PlacementHistory_MS_DriveMaster">
+            <End Role="MS_DriveMaster" EntitySet="MS_DriveMaster" />
+            <End Role="CA_PlacementHistory" EntitySet="CA_PlacementHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_PlacementHistory_MS_ResultMaster" Association="Team2_FRESHERSPOOLModel.Store.FK_CA_PlacementHistory_MS_ResultMaster">
+            <End Role="MS_ResultMaster" EntitySet="MS_ResultMaster" />
+            <End Role="CA_PlacementHistory" EntitySet="CA_PlacementHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_RolePreferences_MS_RoleMaster" Association="Team2_FRESHERSPOOLModel.Store.FK_CA_RolePreferences_MS_RoleMaster">
+            <End Role="MS_RoleMaster" EntitySet="MS_RoleMaster" />
+            <End Role="CA_RolePreferences" EntitySet="CA_RolePreferences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Skills_CA_PersonalData" Association="Team2_FRESHERSPOOLModel.Store.FK_CA_Skills_CA_PersonalData">
+            <End Role="CA_PersonalData" EntitySet="CA_PersonalData" />
+            <End Role="CA_Skills" EntitySet="CA_Skills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Skills_MS_SkillLevelMaster" Association="Team2_FRESHERSPOOLModel.Store.FK_CA_Skills_MS_SkillLevelMaster">
+            <End Role="MS_SkillLevelMaster" EntitySet="MS_SkillLevelMaster" />
+            <End Role="CA_Skills" EntitySet="CA_Skills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Skills_MS_SkillMaster" Association="Team2_FRESHERSPOOLModel.Store.FK_CA_Skills_MS_SkillMaster">
+            <End Role="MS_SkillMaster" EntitySet="MS_SkillMaster" />
+            <End Role="CA_Skills" EntitySet="CA_Skills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EM_JobPostings_EM_EmployerData" Association="Team2_FRESHERSPOOLModel.Store.FK_EM_JobPostings_EM_EmployerData">
+            <End Role="EM_EmployerData" EntitySet="EM_EmployerData" />
+            <End Role="EM_JobPostings" EntitySet="EM_JobPostings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EM_JobPostings_MS_CityMaster1" Association="Team2_FRESHERSPOOLModel.Store.FK_EM_JobPostings_MS_CityMaster1">
+            <End Role="MS_CityMaster" EntitySet="MS_CityMaster" />
+            <End Role="EM_JobPostings" EntitySet="EM_JobPostings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EM_JobPostings_MS_DriveMaster" Association="Team2_FRESHERSPOOLModel.Store.FK_EM_JobPostings_MS_DriveMaster">
+            <End Role="MS_DriveMaster" EntitySet="MS_DriveMaster" />
+            <End Role="EM_JobPostings" EntitySet="EM_JobPostings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EM_JobPostings_MS_RoleMaster" Association="Team2_FRESHERSPOOLModel.Store.FK_EM_JobPostings_MS_RoleMaster">
+            <End Role="MS_RoleMaster" EntitySet="MS_RoleMaster" />
+            <End Role="EM_JobPostings" EntitySet="EM_JobPostings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EM_JobPostings_Shortlistings_EM_JobPostings_Shortlistings1" Association="Team2_FRESHERSPOOLModel.Store.FK_EM_JobPostings_Shortlistings_EM_JobPostings_Shortlistings1">
+            <End Role="CA_PersonalData" EntitySet="CA_PersonalData" />
+            <End Role="EM_JobPostings_Shortlistings" EntitySet="EM_JobPostings_Shortlistings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EM_JobPostings_Shortlistings_MS_ResultMaster" Association="Team2_FRESHERSPOOLModel.Store.FK_EM_JobPostings_Shortlistings_MS_ResultMaster">
+            <End Role="MS_ResultMaster" EntitySet="MS_ResultMaster" />
+            <End Role="EM_JobPostings_Shortlistings" EntitySet="EM_JobPostings_Shortlistings" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CA_Academics">
+          <Key>
+            <PropertyRef Name="CandidateID" />
+          </Key>
+          <Property Name="CandidateID" Type="int" Nullable="false" />
+          <Property Name="PG_Qual" Type="varchar" MaxLength="6" />
+          <Property Name="PG_Stream" Type="char" MaxLength="6" />
+          <Property Name="PG_PassPercentage" Type="float" />
+          <Property Name="PG_PassingYear" Type="char" MaxLength="4" />
+          <Property Name="PG_College" Type="char" MaxLength="6" />
+          <Property Name="Grad_Qual" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="Grad_Stream" Type="char" Nullable="false" MaxLength="6" />
+          <Property Name="Grad_PassPercentage" Type="float" Nullable="false" />
+          <Property Name="Grad_PassingYear" Type="char" Nullable="false" MaxLength="10" />
+          <Property Name="Grad_College" Type="char" MaxLength="6" />
+          <Property Name="Inter_Board" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="Inter_Stream" Type="char" Nullable="false" MaxLength="6" />
+          <Property Name="Inter_PassPercentage" Type="float" Nullable="false" />
+          <Property Name="Inter_PassingYear" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="Inter_College" Type="char" MaxLength="6" />
+          <Property Name="Tenth_Board" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="Tenth_PassPercentage" Type="float" Nullable="false" />
+          <Property Name="Tenth_PassingYear" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="Tenth_School" Type="char" Nullable="false" MaxLength="6" />
+          <Property Name="AnyGaps" Type="varchar" MaxLength="3" />
+          <Property Name="AnyBacklogs" Type="varchar" MaxLength="3" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Team2_FRESHERSPOOL.dbo.CA_JobPreferences' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="CA_JobPreferences">
+          <Key>
+            <PropertyRef Name="CandidateID" />
+            <PropertyRef Name="SignBond" />
+            <PropertyRef Name="NightShifts" />
+            <PropertyRef Name="Relocate" />
+          </Key>
+          <Property Name="CandidateID" Type="int" Nullable="false" />
+          <Property Name="SignBond" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="NightShifts" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="Relocate" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="RelocationCity1" Type="char" MaxLength="1" />
+          <Property Name="RelocationCity2" Type="char" MaxLength="1" />
+          <Property Name="RelocationCity3" Type="char" MaxLength="1" />
+          <Property Name="RelocationCity4" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="CA_Languages">
+          <Key>
+            <PropertyRef Name="CandidateID" />
+            <PropertyRef Name="LanguageID" />
+          </Key>
+          <Property Name="CandidateID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LanguageID" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="Language" Type="varchar" MaxLength="30" />
+          <Property Name="Speak" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="Reads" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="Write" Type="char" Nullable="false" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="CA_MentorRatings">
+          <Key>
+            <PropertyRef Name="CandidateID" />
+            <PropertyRef Name="TestID" />
+          </Key>
+          <Property Name="CandidateID" Type="int" Nullable="false" />
+          <Property Name="TestID" Type="int" Nullable="false" />
+          <Property Name="Personality" Type="varchar" MaxLength="10" />
+          <Property Name="Communication" Type="varchar" MaxLength="10" />
+          <Property Name="ConfidenceLevels" Type="varchar" MaxLength="10" />
+          <Property Name="English" Type="varchar" MaxLength="10" />
+          <Property Name="GeneralAptitude" Type="varchar" MaxLength="10" />
+          <Property Name="AnalyticalAbilities" Type="varchar" MaxLength="10" />
+          <Property Name="MentorRemarks1" Type="varchar" MaxLength="10" />
+          <Property Name="MentorRemarks2" Type="varchar" MaxLength="10" />
+          <Property Name="MentorRemarks3" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="CA_PersonalData">
+          <Key>
+            <PropertyRef Name="CandidateID" />
+          </Key>
+          <Property Name="CandidateID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="MiddleName" Type="varchar" MaxLength="30" />
+          <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Title" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Gender" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="DateOfBirth" Type="date" Nullable="false" />
+          <Property Name="FatherName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Category" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="YearsofExperience" Type="int" Nullable="false" />
+          <Property Name="CurrentLocation" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="Login" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="PrimaryEmail" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="SecondaryEmail" Type="varchar" MaxLength="25" />
+          <Property Name="MobileNo" Type="char" Nullable="false" MaxLength="10" />
+          <Property Name="LandlineNo" Type="char" MaxLength="10" />
+          <Property Name="ApplicationDate" Type="date" Nullable="false" />
+          <Property Name="MotherTongue" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="UniversityID" Type="varchar" Nullable="false" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="CA_PlacementHistory">
+          <Key>
+            <PropertyRef Name="CandidateID" />
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="CandidateID" Type="int" Nullable="false" />
+          <Property Name="JobID" Type="int" Nullable="false" />
+          <Property Name="EmployerID" Type="char" Nullable="false" MaxLength="6" />
+          <Property Name="DriveType" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="DrivePlace" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="Result" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Remarks" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CA_ProfessionalCourses">
+          <Key>
+            <PropertyRef Name="PCNo" />
+          </Key>
+          <Property Name="PCNo" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="CandidateID" Type="int" Nullable="false" />
+          <Property Name="Particulars" Type="char" MaxLength="1" />
+          <Property Name="Institution" Type="char" Nullable="false" MaxLength="6" />
+          <Property Name="Place" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="FromDT" Type="char" MaxLength="2" />
+          <Property Name="ToDT" Type="char" MaxLength="2" />
+        </EntityType>
+        <EntityType Name="CA_RolePreferences">
+          <Key>
+            <PropertyRef Name="CandidateID" />
+          </Key>
+          <Property Name="CandidateID" Type="char" Nullable="false" MaxLength="6" />
+          <Property Name="RoleID" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="Priority" Type="char" Nullable="false" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="CA_Skills">
+          <Key>
+            <PropertyRef Name="CandidateID" />
+            <PropertyRef Name="SkillID" />
+          </Key>
+          <Property Name="CandidateID" Type="int" Nullable="false" />
+          <Property Name="SkillID" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="SkillLevelID" Type="char" Nullable="false" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="CO_College">
+          <Key>
+            <PropertyRef Name="CollegeID" />
+          </Key>
+          <Property Name="CollegeID" Type="char" Nullable="false" MaxLength="6" />
+          <Property Name="CollegeName" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="CollegeCode" Type="int" Nullable="false" />
+          <Property Name="CollegeEmail" Type="varchar" MaxLength="30" />
+          <Property Name="Website" Type="varchar" MaxLength="30" />
+          <Property Name="YearStarted" Type="int" />
+          <Property Name="TpoName" Type="varchar" MaxLength="30" />
+          <Property Name="TpoMobile" Type="varchar" MaxLength="30" />
+          <Property Name="TpoEmail" Type="varchar" MaxLength="30" />
+          <Property Name="CollegePhone" Type="char" Nullable="false" MaxLength="10" />
+          <Property Name="Status" Type="varchar" MaxLength="30" />
+          <Property Name="Login" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="AddressLine1" Type="varchar" MaxLength="30" />
+          <Property Name="AddressLine2" Type="varchar" MaxLength="30" />
+          <Property Name="City" Type="char" MaxLength="2" />
+          <Property Name="State" Type="varchar" MaxLength="30" />
+          <Property Name="Pin" Type="int" />
+          <Property Name="CollegeLogo" Type="varchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="EM_EmployerData">
+          <Key>
+            <PropertyRef Name="EmployerID" />
+          </Key>
+          <Property Name="EmployerID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Login" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="HeadQuarters" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Founder" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="80" />
+          <Property Name="Domain" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Logo" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="Website" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="CompanyEmail" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="ContactNumber" Type="char" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="EM_JobPostings">
+          <Key>
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmployerID" Type="int" Nullable="false" />
+          <Property Name="RoleID" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="StreamID" Type="char" Nullable="false" MaxLength="6" />
+          <Property Name="JobTitle" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="JobDescription" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="DriveType" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Location" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="CityID" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="CityName" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Date" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="EM_JobPostings_Shortlistings">
+          <Key>
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobID" Type="int" Nullable="false" />
+          <Property Name="CandidateID" Type="int" Nullable="false" />
+          <Property Name="Result" Type="varchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="EM_JobPostings_Skillset">
+          <Key>
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobID" Type="int" Nullable="false" />
+          <Property Name="SkillID" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="SkillLevelID" Type="char" Nullable="false" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="MS_CityMaster">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="CityName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MS_DriveMaster">
+          <Key>
+            <PropertyRef Name="DriveType" />
+          </Key>
+          <Property Name="DriveType" Type="varchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="MS_LanguageMaster">
+          <Key>
+            <PropertyRef Name="LanguageID" />
+          </Key>
+          <Property Name="LanguageID" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="Language" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MS_ResultMaster">
+          <Key>
+            <PropertyRef Name="Result" />
+          </Key>
+          <Property Name="Result" Type="varchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="MS_RoleMaster">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="RoleDesc" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MS_SkillLevelMaster">
+          <Key>
+            <PropertyRef Name="SkillLevelID" />
+          </Key>
+          <Property Name="SkillLevelID" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="SkillDesc" Type="varchar" Nullable="false" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="MS_SkillMaster">
+          <Key>
+            <PropertyRef Name="SkillID" />
+          </Key>
+          <Property Name="SkillID" Type="char" Nullable="false" MaxLength="3" />
+          <Property Name="SkillDesc" Type="varchar" Nullable="false" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="MS_StreamMaster">
+          <Key>
+            <PropertyRef Name="StreamID" />
+          </Key>
+          <Property Name="StreamID" Type="char" Nullable="false" MaxLength="6" />
+          <Property Name="StreamDesc" Type="varchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_CA_Academics_CA_PersonalData">
+          <End Role="CA_PersonalData" Type="Team2_FRESHERSPOOLModel.Store.CA_PersonalData" Multiplicity="1" />
+          <End Role="CA_Academics" Type="Team2_FRESHERSPOOLModel.Store.CA_Academics" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CA_PersonalData">
+              <PropertyRef Name="CandidateID" />
+            </Principal>
+            <Dependent Role="CA_Academics">
+              <PropertyRef Name="CandidateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Academics_CO_College1 Grad">
+          <End Role="CO_College" Type="Team2_FRESHERSPOOLModel.Store.CO_College" Multiplicity="1" />
+          <End Role="CA_Academics" Type="Team2_FRESHERSPOOLModel.Store.CA_Academics" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CO_College">
+              <PropertyRef Name="CollegeID" />
+            </Principal>
+            <Dependent Role="CA_Academics">
+              <PropertyRef Name="Tenth_School" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Academics_CO_College2 Inter">
+          <End Role="CO_College" Type="Team2_FRESHERSPOOLModel.Store.CO_College" Multiplicity="0..1" />
+          <End Role="CA_Academics" Type="Team2_FRESHERSPOOLModel.Store.CA_Academics" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CO_College">
+              <PropertyRef Name="CollegeID" />
+            </Principal>
+            <Dependent Role="CA_Academics">
+              <PropertyRef Name="Inter_College" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Academics_MS_StreamMaster">
+          <End Role="MS_StreamMaster" Type="Team2_FRESHERSPOOLModel.Store.MS_StreamMaster" Multiplicity="1" />
+          <End Role="CA_Academics" Type="Team2_FRESHERSPOOLModel.Store.CA_Academics" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_StreamMaster">
+              <PropertyRef Name="StreamID" />
+            </Principal>
+            <Dependent Role="CA_Academics">
+              <PropertyRef Name="Grad_Stream" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Academics_MS_StreamMaster1">
+          <End Role="MS_StreamMaster" Type="Team2_FRESHERSPOOLModel.Store.MS_StreamMaster" Multiplicity="1" />
+          <End Role="CA_Academics" Type="Team2_FRESHERSPOOLModel.Store.CA_Academics" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_StreamMaster">
+              <PropertyRef Name="StreamID" />
+            </Principal>
+            <Dependent Role="CA_Academics">
+              <PropertyRef Name="Inter_Stream" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Academics_MS_StreamMaster2">
+          <End Role="MS_StreamMaster" Type="Team2_FRESHERSPOOLModel.Store.MS_StreamMaster" Multiplicity="0..1" />
+          <End Role="CA_Academics" Type="Team2_FRESHERSPOOLModel.Store.CA_Academics" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_StreamMaster">
+              <PropertyRef Name="StreamID" />
+            </Principal>
+            <Dependent Role="CA_Academics">
+              <PropertyRef Name="PG_Stream" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Languages_CA_Languages">
+          <End Role="MS_LanguageMaster" Type="Team2_FRESHERSPOOLModel.Store.MS_LanguageMaster" Multiplicity="1" />
+          <End Role="CA_Languages" Type="Team2_FRESHERSPOOLModel.Store.CA_Languages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_LanguageMaster">
+              <PropertyRef Name="LanguageID" />
+            </Principal>
+            <Dependent Role="CA_Languages">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Languages_CA_PersonalData">
+          <End Role="CA_PersonalData" Type="Team2_FRESHERSPOOLModel.Store.CA_PersonalData" Multiplicity="1" />
+          <End Role="CA_Languages" Type="Team2_FRESHERSPOOLModel.Store.CA_Languages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CA_PersonalData">
+              <PropertyRef Name="CandidateID" />
+            </Principal>
+            <Dependent Role="CA_Languages">
+              <PropertyRef Name="CandidateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_MentorRatings_CA_PersonalData">
+          <End Role="CA_PersonalData" Type="Team2_FRESHERSPOOLModel.Store.CA_PersonalData" Multiplicity="1" />
+          <End Role="CA_MentorRatings" Type="Team2_FRESHERSPOOLModel.Store.CA_MentorRatings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CA_PersonalData">
+              <PropertyRef Name="CandidateID" />
+            </Principal>
+            <Dependent Role="CA_MentorRatings">
+              <PropertyRef Name="CandidateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_PersonalData_CA_PersonalData">
+          <End Role="MS_LanguageMaster" Type="Team2_FRESHERSPOOLModel.Store.MS_LanguageMaster" Multiplicity="1" />
+          <End Role="CA_PersonalData" Type="Team2_FRESHERSPOOLModel.Store.CA_PersonalData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_LanguageMaster">
+              <PropertyRef Name="LanguageID" />
+            </Principal>
+            <Dependent Role="CA_PersonalData">
+              <PropertyRef Name="MotherTongue" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_PlacementHistory_MS_DriveMaster">
+          <End Role="MS_DriveMaster" Type="Team2_FRESHERSPOOLModel.Store.MS_DriveMaster" Multiplicity="1" />
+          <End Role="CA_PlacementHistory" Type="Team2_FRESHERSPOOLModel.Store.CA_PlacementHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_DriveMaster">
+              <PropertyRef Name="DriveType" />
+            </Principal>
+            <Dependent Role="CA_PlacementHistory">
+              <PropertyRef Name="DriveType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_PlacementHistory_MS_ResultMaster">
+          <End Role="MS_ResultMaster" Type="Team2_FRESHERSPOOLModel.Store.MS_ResultMaster" Multiplicity="1" />
+          <End Role="CA_PlacementHistory" Type="Team2_FRESHERSPOOLModel.Store.CA_PlacementHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_ResultMaster">
+              <PropertyRef Name="Result" />
+            </Principal>
+            <Dependent Role="CA_PlacementHistory">
+              <PropertyRef Name="Result" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_RolePreferences_MS_RoleMaster">
+          <End Role="MS_RoleMaster" Type="Team2_FRESHERSPOOLModel.Store.MS_RoleMaster" Multiplicity="1" />
+          <End Role="CA_RolePreferences" Type="Team2_FRESHERSPOOLModel.Store.CA_RolePreferences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_RoleMaster">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="CA_RolePreferences">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Skills_CA_PersonalData">
+          <End Role="CA_PersonalData" Type="Team2_FRESHERSPOOLModel.Store.CA_PersonalData" Multiplicity="1" />
+          <End Role="CA_Skills" Type="Team2_FRESHERSPOOLModel.Store.CA_Skills" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CA_PersonalData">
+              <PropertyRef Name="CandidateID" />
+            </Principal>
+            <Dependent Role="CA_Skills">
+              <PropertyRef Name="CandidateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Skills_MS_SkillLevelMaster">
+          <End Role="MS_SkillLevelMaster" Type="Team2_FRESHERSPOOLModel.Store.MS_SkillLevelMaster" Multiplicity="1" />
+          <End Role="CA_Skills" Type="Team2_FRESHERSPOOLModel.Store.CA_Skills" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_SkillLevelMaster">
+              <PropertyRef Name="SkillLevelID" />
+            </Principal>
+            <Dependent Role="CA_Skills">
+              <PropertyRef Name="SkillLevelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Skills_MS_SkillMaster">
+          <End Role="MS_SkillMaster" Type="Team2_FRESHERSPOOLModel.Store.MS_SkillMaster" Multiplicity="1" />
+          <End Role="CA_Skills" Type="Team2_FRESHERSPOOLModel.Store.CA_Skills" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_SkillMaster">
+              <PropertyRef Name="SkillID" />
+            </Principal>
+            <Dependent Role="CA_Skills">
+              <PropertyRef Name="SkillID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EM_JobPostings_EM_EmployerData">
+          <End Role="EM_EmployerData" Type="Team2_FRESHERSPOOLModel.Store.EM_EmployerData" Multiplicity="1" />
+          <End Role="EM_JobPostings" Type="Team2_FRESHERSPOOLModel.Store.EM_JobPostings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EM_EmployerData">
+              <PropertyRef Name="EmployerID" />
+            </Principal>
+            <Dependent Role="EM_JobPostings">
+              <PropertyRef Name="EmployerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EM_JobPostings_MS_CityMaster1">
+          <End Role="MS_CityMaster" Type="Team2_FRESHERSPOOLModel.Store.MS_CityMaster" Multiplicity="1" />
+          <End Role="EM_JobPostings" Type="Team2_FRESHERSPOOLModel.Store.EM_JobPostings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_CityMaster">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="EM_JobPostings">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EM_JobPostings_MS_DriveMaster">
+          <End Role="MS_DriveMaster" Type="Team2_FRESHERSPOOLModel.Store.MS_DriveMaster" Multiplicity="1" />
+          <End Role="EM_JobPostings" Type="Team2_FRESHERSPOOLModel.Store.EM_JobPostings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_DriveMaster">
+              <PropertyRef Name="DriveType" />
+            </Principal>
+            <Dependent Role="EM_JobPostings">
+              <PropertyRef Name="DriveType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EM_JobPostings_MS_RoleMaster">
+          <End Role="MS_RoleMaster" Type="Team2_FRESHERSPOOLModel.Store.MS_RoleMaster" Multiplicity="1" />
+          <End Role="EM_JobPostings" Type="Team2_FRESHERSPOOLModel.Store.EM_JobPostings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_RoleMaster">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="EM_JobPostings">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EM_JobPostings_Shortlistings_EM_JobPostings_Shortlistings1">
+          <End Role="CA_PersonalData" Type="Team2_FRESHERSPOOLModel.Store.CA_PersonalData" Multiplicity="1" />
+          <End Role="EM_JobPostings_Shortlistings" Type="Team2_FRESHERSPOOLModel.Store.EM_JobPostings_Shortlistings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CA_PersonalData">
+              <PropertyRef Name="CandidateID" />
+            </Principal>
+            <Dependent Role="EM_JobPostings_Shortlistings">
+              <PropertyRef Name="CandidateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EM_JobPostings_Shortlistings_MS_ResultMaster">
+          <End Role="MS_ResultMaster" Type="Team2_FRESHERSPOOLModel.Store.MS_ResultMaster" Multiplicity="1" />
+          <End Role="EM_JobPostings_Shortlistings" Type="Team2_FRESHERSPOOLModel.Store.EM_JobPostings_Shortlistings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_ResultMaster">
+              <PropertyRef Name="Result" />
+            </Principal>
+            <Dependent Role="EM_JobPostings_Shortlistings">
+              <PropertyRef Name="Result" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Team2_FRESHERSPOOLModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Team2_FRESHERSPOOLEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CA_Academics" EntityType="Team2_FRESHERSPOOLModel.CA_Academics" />
+          <EntitySet Name="CA_JobPreferences" EntityType="Team2_FRESHERSPOOLModel.CA_JobPreferences" />
+          <EntitySet Name="CA_Languages" EntityType="Team2_FRESHERSPOOLModel.CA_Languages" />
+          <EntitySet Name="CA_MentorRatings" EntityType="Team2_FRESHERSPOOLModel.CA_MentorRatings" />
+          <EntitySet Name="CA_PersonalData" EntityType="Team2_FRESHERSPOOLModel.CA_PersonalData" />
+          <EntitySet Name="CA_PlacementHistory" EntityType="Team2_FRESHERSPOOLModel.CA_PlacementHistory" />
+          <EntitySet Name="CA_ProfessionalCourses" EntityType="Team2_FRESHERSPOOLModel.CA_ProfessionalCourses" />
+          <EntitySet Name="CA_RolePreferences" EntityType="Team2_FRESHERSPOOLModel.CA_RolePreferences" />
+          <EntitySet Name="CA_Skills" EntityType="Team2_FRESHERSPOOLModel.CA_Skills" />
+          <EntitySet Name="CO_College" EntityType="Team2_FRESHERSPOOLModel.CO_College" />
+          <EntitySet Name="EM_EmployerData" EntityType="Team2_FRESHERSPOOLModel.EM_EmployerData" />
+          <EntitySet Name="EM_JobPostings" EntityType="Team2_FRESHERSPOOLModel.EM_JobPostings" />
+          <EntitySet Name="EM_JobPostings_Shortlistings" EntityType="Team2_FRESHERSPOOLModel.EM_JobPostings_Shortlistings" />
+          <EntitySet Name="EM_JobPostings_Skillset" EntityType="Team2_FRESHERSPOOLModel.EM_JobPostings_Skillset" />
+          <EntitySet Name="MS_CityMaster" EntityType="Team2_FRESHERSPOOLModel.MS_CityMaster" />
+          <EntitySet Name="MS_DriveMaster" EntityType="Team2_FRESHERSPOOLModel.MS_DriveMaster" />
+          <EntitySet Name="MS_LanguageMaster" EntityType="Team2_FRESHERSPOOLModel.MS_LanguageMaster" />
+          <EntitySet Name="MS_ResultMaster" EntityType="Team2_FRESHERSPOOLModel.MS_ResultMaster" />
+          <EntitySet Name="MS_RoleMaster" EntityType="Team2_FRESHERSPOOLModel.MS_RoleMaster" />
+          <EntitySet Name="MS_SkillLevelMaster" EntityType="Team2_FRESHERSPOOLModel.MS_SkillLevelMaster" />
+          <EntitySet Name="MS_SkillMaster" EntityType="Team2_FRESHERSPOOLModel.MS_SkillMaster" />
+          <EntitySet Name="MS_StreamMaster" EntityType="Team2_FRESHERSPOOLModel.MS_StreamMaster" />
+          <EntitySet Name="sysdiagrams" EntityType="Team2_FRESHERSPOOLModel.sysdiagram" />
+          <AssociationSet Name="FK_CA_Academics_CA_PersonalData" Association="Team2_FRESHERSPOOLModel.FK_CA_Academics_CA_PersonalData">
+            <End Role="CA_PersonalData" EntitySet="CA_PersonalData" />
+            <End Role="CA_Academics" EntitySet="CA_Academics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Academics_CO_College1_Grad" Association="Team2_FRESHERSPOOLModel.FK_CA_Academics_CO_College1_Grad">
+            <End Role="CO_College" EntitySet="CO_College" />
+            <End Role="CA_Academics" EntitySet="CA_Academics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Academics_CO_College2_Inter" Association="Team2_FRESHERSPOOLModel.FK_CA_Academics_CO_College2_Inter">
+            <End Role="CO_College" EntitySet="CO_College" />
+            <End Role="CA_Academics" EntitySet="CA_Academics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Academics_MS_StreamMaster" Association="Team2_FRESHERSPOOLModel.FK_CA_Academics_MS_StreamMaster">
+            <End Role="MS_StreamMaster" EntitySet="MS_StreamMaster" />
+            <End Role="CA_Academics" EntitySet="CA_Academics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Academics_MS_StreamMaster1" Association="Team2_FRESHERSPOOLModel.FK_CA_Academics_MS_StreamMaster1">
+            <End Role="MS_StreamMaster" EntitySet="MS_StreamMaster" />
+            <End Role="CA_Academics" EntitySet="CA_Academics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Academics_MS_StreamMaster2" Association="Team2_FRESHERSPOOLModel.FK_CA_Academics_MS_StreamMaster2">
+            <End Role="MS_StreamMaster" EntitySet="MS_StreamMaster" />
+            <End Role="CA_Academics" EntitySet="CA_Academics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Languages_CA_Languages" Association="Team2_FRESHERSPOOLModel.FK_CA_Languages_CA_Languages">
+            <End Role="MS_LanguageMaster" EntitySet="MS_LanguageMaster" />
+            <End Role="CA_Languages" EntitySet="CA_Languages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Languages_CA_PersonalData" Association="Team2_FRESHERSPOOLModel.FK_CA_Languages_CA_PersonalData">
+            <End Role="CA_PersonalData" EntitySet="CA_PersonalData" />
+            <End Role="CA_Languages" EntitySet="CA_Languages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_MentorRatings_CA_PersonalData" Association="Team2_FRESHERSPOOLModel.FK_CA_MentorRatings_CA_PersonalData">
+            <End Role="CA_PersonalData" EntitySet="CA_PersonalData" />
+            <End Role="CA_MentorRatings" EntitySet="CA_MentorRatings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_PersonalData_CA_PersonalData" Association="Team2_FRESHERSPOOLModel.FK_CA_PersonalData_CA_PersonalData">
+            <End Role="MS_LanguageMaster" EntitySet="MS_LanguageMaster" />
+            <End Role="CA_PersonalData" EntitySet="CA_PersonalData" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Skills_CA_PersonalData" Association="Team2_FRESHERSPOOLModel.FK_CA_Skills_CA_PersonalData">
+            <End Role="CA_PersonalData" EntitySet="CA_PersonalData" />
+            <End Role="CA_Skills" EntitySet="CA_Skills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EM_JobPostings_Shortlistings_EM_JobPostings_Shortlistings1" Association="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_Shortlistings_EM_JobPostings_Shortlistings1">
+            <End Role="CA_PersonalData" EntitySet="CA_PersonalData" />
+            <End Role="EM_JobPostings_Shortlistings" EntitySet="EM_JobPostings_Shortlistings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_PlacementHistory_MS_DriveMaster" Association="Team2_FRESHERSPOOLModel.FK_CA_PlacementHistory_MS_DriveMaster">
+            <End Role="MS_DriveMaster" EntitySet="MS_DriveMaster" />
+            <End Role="CA_PlacementHistory" EntitySet="CA_PlacementHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_PlacementHistory_MS_ResultMaster" Association="Team2_FRESHERSPOOLModel.FK_CA_PlacementHistory_MS_ResultMaster">
+            <End Role="MS_ResultMaster" EntitySet="MS_ResultMaster" />
+            <End Role="CA_PlacementHistory" EntitySet="CA_PlacementHistory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_RolePreferences_MS_RoleMaster" Association="Team2_FRESHERSPOOLModel.FK_CA_RolePreferences_MS_RoleMaster">
+            <End Role="MS_RoleMaster" EntitySet="MS_RoleMaster" />
+            <End Role="CA_RolePreferences" EntitySet="CA_RolePreferences" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Skills_MS_SkillLevelMaster" Association="Team2_FRESHERSPOOLModel.FK_CA_Skills_MS_SkillLevelMaster">
+            <End Role="MS_SkillLevelMaster" EntitySet="MS_SkillLevelMaster" />
+            <End Role="CA_Skills" EntitySet="CA_Skills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CA_Skills_MS_SkillMaster" Association="Team2_FRESHERSPOOLModel.FK_CA_Skills_MS_SkillMaster">
+            <End Role="MS_SkillMaster" EntitySet="MS_SkillMaster" />
+            <End Role="CA_Skills" EntitySet="CA_Skills" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EM_JobPostings_EM_EmployerData" Association="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_EM_EmployerData">
+            <End Role="EM_EmployerData" EntitySet="EM_EmployerData" />
+            <End Role="EM_JobPostings" EntitySet="EM_JobPostings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EM_JobPostings_MS_CityMaster1" Association="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_MS_CityMaster1">
+            <End Role="MS_CityMaster" EntitySet="MS_CityMaster" />
+            <End Role="EM_JobPostings" EntitySet="EM_JobPostings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EM_JobPostings_MS_DriveMaster" Association="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_MS_DriveMaster">
+            <End Role="MS_DriveMaster" EntitySet="MS_DriveMaster" />
+            <End Role="EM_JobPostings" EntitySet="EM_JobPostings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EM_JobPostings_MS_RoleMaster" Association="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_MS_RoleMaster">
+            <End Role="MS_RoleMaster" EntitySet="MS_RoleMaster" />
+            <End Role="EM_JobPostings" EntitySet="EM_JobPostings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EM_JobPostings_Shortlistings_MS_ResultMaster" Association="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_Shortlistings_MS_ResultMaster">
+            <End Role="MS_ResultMaster" EntitySet="MS_ResultMaster" />
+            <End Role="EM_JobPostings_Shortlistings" EntitySet="EM_JobPostings_Shortlistings" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CA_Academics">
+          <Key>
+            <PropertyRef Name="CandidateID" />
+          </Key>
+          <Property Name="CandidateID" Type="Int32" Nullable="false" />
+          <Property Name="PG_Qual" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="PG_Stream" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="PG_PassPercentage" Type="Double" />
+          <Property Name="PG_PassingYear" Type="String" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="PG_College" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="Grad_Qual" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="Grad_Stream" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="Grad_PassPercentage" Type="Double" Nullable="false" />
+          <Property Name="Grad_PassingYear" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="Grad_College" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="Inter_Board" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="Inter_Stream" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="Inter_PassPercentage" Type="Double" Nullable="false" />
+          <Property Name="Inter_PassingYear" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="Inter_College" Type="String" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="Tenth_Board" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="Tenth_PassPercentage" Type="Double" Nullable="false" />
+          <Property Name="Tenth_PassingYear" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="true" />
+          <Property Name="Tenth_School" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="AnyGaps" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="AnyBacklogs" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CA_PersonalData" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Academics_CA_PersonalData" FromRole="CA_Academics" ToRole="CA_PersonalData" />
+          <NavigationProperty Name="CO_College" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Academics_CO_College1_Grad" FromRole="CA_Academics" ToRole="CO_College" />
+          <NavigationProperty Name="CO_College1" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Academics_CO_College2_Inter" FromRole="CA_Academics" ToRole="CO_College" />
+          <NavigationProperty Name="MS_StreamMaster" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Academics_MS_StreamMaster" FromRole="CA_Academics" ToRole="MS_StreamMaster" />
+          <NavigationProperty Name="MS_StreamMaster1" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Academics_MS_StreamMaster1" FromRole="CA_Academics" ToRole="MS_StreamMaster" />
+          <NavigationProperty Name="MS_StreamMaster2" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Academics_MS_StreamMaster2" FromRole="CA_Academics" ToRole="MS_StreamMaster" />
+        </EntityType>
+        <EntityType Name="CA_JobPreferences">
+          <Key>
+            <PropertyRef Name="CandidateID" />
+            <PropertyRef Name="SignBond" />
+            <PropertyRef Name="NightShifts" />
+            <PropertyRef Name="Relocate" />
+          </Key>
+          <Property Name="CandidateID" Type="Int32" Nullable="false" />
+          <Property Name="SignBond" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="NightShifts" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="Relocate" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="RelocationCity1" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="RelocationCity2" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="RelocationCity3" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="RelocationCity4" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="CA_Languages">
+          <Key>
+            <PropertyRef Name="CandidateID" />
+            <PropertyRef Name="LanguageID" />
+          </Key>
+          <Property Name="CandidateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LanguageID" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="Language" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Speak" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="Reads" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="Write" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="MS_LanguageMaster" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Languages_CA_Languages" FromRole="CA_Languages" ToRole="MS_LanguageMaster" />
+          <NavigationProperty Name="CA_PersonalData" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Languages_CA_PersonalData" FromRole="CA_Languages" ToRole="CA_PersonalData" />
+        </EntityType>
+        <EntityType Name="CA_MentorRatings">
+          <Key>
+            <PropertyRef Name="CandidateID" />
+            <PropertyRef Name="TestID" />
+          </Key>
+          <Property Name="CandidateID" Type="Int32" Nullable="false" />
+          <Property Name="TestID" Type="Int32" Nullable="false" />
+          <Property Name="Personality" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Communication" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="ConfidenceLevels" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="English" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="GeneralAptitude" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="AnalyticalAbilities" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="MentorRemarks1" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="MentorRemarks2" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="MentorRemarks3" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CA_PersonalData" Relationship="Team2_FRESHERSPOOLModel.FK_CA_MentorRatings_CA_PersonalData" FromRole="CA_MentorRatings" ToRole="CA_PersonalData" />
+        </EntityType>
+        <EntityType Name="CA_PersonalData">
+          <Key>
+            <PropertyRef Name="CandidateID" />
+          </Key>
+          <Property Name="CandidateID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Gender" Type="String" Nullable="false" MaxLength="7" Unicode="false" FixedLength="false" />
+          <Property Name="DateOfBirth" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="FatherName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Category" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="YearsofExperience" Type="Int32" Nullable="false" />
+          <Property Name="CurrentLocation" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="Login" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="PrimaryEmail" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="SecondaryEmail" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="MobileNo" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="LandlineNo" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="ApplicationDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="MotherTongue" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="UniversityID" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CA_Academics" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Academics_CA_PersonalData" FromRole="CA_PersonalData" ToRole="CA_Academics" />
+          <NavigationProperty Name="CA_Languages" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Languages_CA_PersonalData" FromRole="CA_PersonalData" ToRole="CA_Languages" />
+          <NavigationProperty Name="CA_MentorRatings" Relationship="Team2_FRESHERSPOOLModel.FK_CA_MentorRatings_CA_PersonalData" FromRole="CA_PersonalData" ToRole="CA_MentorRatings" />
+          <NavigationProperty Name="MS_LanguageMaster" Relationship="Team2_FRESHERSPOOLModel.FK_CA_PersonalData_CA_PersonalData" FromRole="CA_PersonalData" ToRole="MS_LanguageMaster" />
+          <NavigationProperty Name="CA_Skills" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Skills_CA_PersonalData" FromRole="CA_PersonalData" ToRole="CA_Skills" />
+          <NavigationProperty Name="EM_JobPostings_Shortlistings" Relationship="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_Shortlistings_EM_JobPostings_Shortlistings1" FromRole="CA_PersonalData" ToRole="EM_JobPostings_Shortlistings" />
+        </EntityType>
+        <EntityType Name="CA_PlacementHistory">
+          <Key>
+            <PropertyRef Name="CandidateID" />
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="CandidateID" Type="Int32" Nullable="false" />
+          <Property Name="JobID" Type="Int32" Nullable="false" />
+          <Property Name="EmployerID" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="DriveType" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DrivePlace" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="Result" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Remarks" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="MS_DriveMaster" Relationship="Team2_FRESHERSPOOLModel.FK_CA_PlacementHistory_MS_DriveMaster" FromRole="CA_PlacementHistory" ToRole="MS_DriveMaster" />
+          <NavigationProperty Name="MS_ResultMaster" Relationship="Team2_FRESHERSPOOLModel.FK_CA_PlacementHistory_MS_ResultMaster" FromRole="CA_PlacementHistory" ToRole="MS_ResultMaster" />
+        </EntityType>
+        <EntityType Name="CA_ProfessionalCourses">
+          <Key>
+            <PropertyRef Name="PCNo" />
+          </Key>
+          <Property Name="PCNo" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="CandidateID" Type="Int32" Nullable="false" />
+          <Property Name="Particulars" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="Institution" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="Place" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="FromDT" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="ToDT" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="CA_RolePreferences">
+          <Key>
+            <PropertyRef Name="CandidateID" />
+          </Key>
+          <Property Name="CandidateID" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="RoleID" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="Priority" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="MS_RoleMaster" Relationship="Team2_FRESHERSPOOLModel.FK_CA_RolePreferences_MS_RoleMaster" FromRole="CA_RolePreferences" ToRole="MS_RoleMaster" />
+        </EntityType>
+        <EntityType Name="CA_Skills">
+          <Key>
+            <PropertyRef Name="CandidateID" />
+            <PropertyRef Name="SkillID" />
+          </Key>
+          <Property Name="CandidateID" Type="Int32" Nullable="false" />
+          <Property Name="SkillID" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="SkillLevelID" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="CA_PersonalData" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Skills_CA_PersonalData" FromRole="CA_Skills" ToRole="CA_PersonalData" />
+          <NavigationProperty Name="MS_SkillLevelMaster" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Skills_MS_SkillLevelMaster" FromRole="CA_Skills" ToRole="MS_SkillLevelMaster" />
+          <NavigationProperty Name="MS_SkillMaster" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Skills_MS_SkillMaster" FromRole="CA_Skills" ToRole="MS_SkillMaster" />
+        </EntityType>
+        <EntityType Name="CO_College">
+          <Key>
+            <PropertyRef Name="CollegeID" />
+          </Key>
+          <Property Name="CollegeID" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="CollegeName" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="CollegeCode" Type="Int32" Nullable="false" />
+          <Property Name="CollegeEmail" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Website" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="YearStarted" Type="Int32" />
+          <Property Name="TpoName" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="TpoMobile" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="TpoEmail" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="CollegePhone" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="Status" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Login" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="AddressLine1" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="AddressLine2" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="State" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Pin" Type="Int32" />
+          <Property Name="CollegeLogo" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CA_Academics" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Academics_CO_College1_Grad" FromRole="CO_College" ToRole="CA_Academics" />
+          <NavigationProperty Name="CA_Academics1" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Academics_CO_College2_Inter" FromRole="CO_College" ToRole="CA_Academics" />
+        </EntityType>
+        <EntityType Name="EM_EmployerData">
+          <Key>
+            <PropertyRef Name="EmployerID" />
+          </Key>
+          <Property Name="EmployerID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Login" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="HeadQuarters" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Founder" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+          <Property Name="Domain" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Logo" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="Website" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="CompanyEmail" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="ContactNumber" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="EM_JobPostings" Relationship="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_EM_EmployerData" FromRole="EM_EmployerData" ToRole="EM_JobPostings" />
+        </EntityType>
+        <EntityType Name="EM_JobPostings">
+          <Key>
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployerID" Type="Int32" Nullable="false" />
+          <Property Name="RoleID" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="StreamID" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="JobTitle" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="JobDescription" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="DriveType" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Location" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="CityID" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="CityName" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="EM_EmployerData" Relationship="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_EM_EmployerData" FromRole="EM_JobPostings" ToRole="EM_EmployerData" />
+          <NavigationProperty Name="MS_CityMaster" Relationship="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_MS_CityMaster1" FromRole="EM_JobPostings" ToRole="MS_CityMaster" />
+          <NavigationProperty Name="MS_DriveMaster" Relationship="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_MS_DriveMaster" FromRole="EM_JobPostings" ToRole="MS_DriveMaster" />
+          <NavigationProperty Name="MS_RoleMaster" Relationship="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_MS_RoleMaster" FromRole="EM_JobPostings" ToRole="MS_RoleMaster" />
+        </EntityType>
+        <EntityType Name="EM_JobPostings_Shortlistings">
+          <Key>
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobID" Type="Int32" Nullable="false" />
+          <Property Name="CandidateID" Type="Int32" Nullable="false" />
+          <Property Name="Result" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CA_PersonalData" Relationship="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_Shortlistings_EM_JobPostings_Shortlistings1" FromRole="EM_JobPostings_Shortlistings" ToRole="CA_PersonalData" />
+          <NavigationProperty Name="MS_ResultMaster" Relationship="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_Shortlistings_MS_ResultMaster" FromRole="EM_JobPostings_Shortlistings" ToRole="MS_ResultMaster" />
+        </EntityType>
+        <EntityType Name="EM_JobPostings_Skillset">
+          <Key>
+            <PropertyRef Name="JobID" />
+          </Key>
+          <Property Name="JobID" Type="Int32" Nullable="false" />
+          <Property Name="SkillID" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="SkillLevelID" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="MS_CityMaster">
+          <Key>
+            <PropertyRef Name="CityID" />
+          </Key>
+          <Property Name="CityID" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="CityName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="EM_JobPostings" Relationship="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_MS_CityMaster1" FromRole="MS_CityMaster" ToRole="EM_JobPostings" />
+        </EntityType>
+        <EntityType Name="MS_DriveMaster">
+          <Key>
+            <PropertyRef Name="DriveType" />
+          </Key>
+          <Property Name="DriveType" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CA_PlacementHistory" Relationship="Team2_FRESHERSPOOLModel.FK_CA_PlacementHistory_MS_DriveMaster" FromRole="MS_DriveMaster" ToRole="CA_PlacementHistory" />
+          <NavigationProperty Name="EM_JobPostings" Relationship="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_MS_DriveMaster" FromRole="MS_DriveMaster" ToRole="EM_JobPostings" />
+        </EntityType>
+        <EntityType Name="MS_LanguageMaster">
+          <Key>
+            <PropertyRef Name="LanguageID" />
+          </Key>
+          <Property Name="LanguageID" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="Language" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CA_Languages" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Languages_CA_Languages" FromRole="MS_LanguageMaster" ToRole="CA_Languages" />
+          <NavigationProperty Name="CA_PersonalData" Relationship="Team2_FRESHERSPOOLModel.FK_CA_PersonalData_CA_PersonalData" FromRole="MS_LanguageMaster" ToRole="CA_PersonalData" />
+        </EntityType>
+        <EntityType Name="MS_ResultMaster">
+          <Key>
+            <PropertyRef Name="Result" />
+          </Key>
+          <Property Name="Result" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CA_PlacementHistory" Relationship="Team2_FRESHERSPOOLModel.FK_CA_PlacementHistory_MS_ResultMaster" FromRole="MS_ResultMaster" ToRole="CA_PlacementHistory" />
+          <NavigationProperty Name="EM_JobPostings_Shortlistings" Relationship="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_Shortlistings_MS_ResultMaster" FromRole="MS_ResultMaster" ToRole="EM_JobPostings_Shortlistings" />
+        </EntityType>
+        <EntityType Name="MS_RoleMaster">
+          <Key>
+            <PropertyRef Name="RoleID" />
+          </Key>
+          <Property Name="RoleID" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="RoleDesc" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CA_RolePreferences" Relationship="Team2_FRESHERSPOOLModel.FK_CA_RolePreferences_MS_RoleMaster" FromRole="MS_RoleMaster" ToRole="CA_RolePreferences" />
+          <NavigationProperty Name="EM_JobPostings" Relationship="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_MS_RoleMaster" FromRole="MS_RoleMaster" ToRole="EM_JobPostings" />
+        </EntityType>
+        <EntityType Name="MS_SkillLevelMaster">
+          <Key>
+            <PropertyRef Name="SkillLevelID" />
+          </Key>
+          <Property Name="SkillLevelID" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="SkillDesc" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CA_Skills" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Skills_MS_SkillLevelMaster" FromRole="MS_SkillLevelMaster" ToRole="CA_Skills" />
+        </EntityType>
+        <EntityType Name="MS_SkillMaster">
+          <Key>
+            <PropertyRef Name="SkillID" />
+          </Key>
+          <Property Name="SkillID" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="SkillDesc" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CA_Skills" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Skills_MS_SkillMaster" FromRole="MS_SkillMaster" ToRole="CA_Skills" />
+        </EntityType>
+        <EntityType Name="MS_StreamMaster">
+          <Key>
+            <PropertyRef Name="StreamID" />
+          </Key>
+          <Property Name="StreamID" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="true" />
+          <Property Name="StreamDesc" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CA_Academics" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Academics_MS_StreamMaster" FromRole="MS_StreamMaster" ToRole="CA_Academics" />
+          <NavigationProperty Name="CA_Academics1" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Academics_MS_StreamMaster1" FromRole="MS_StreamMaster" ToRole="CA_Academics" />
+          <NavigationProperty Name="CA_Academics2" Relationship="Team2_FRESHERSPOOLModel.FK_CA_Academics_MS_StreamMaster2" FromRole="MS_StreamMaster" ToRole="CA_Academics" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_CA_Academics_CA_PersonalData">
+          <End Role="CA_PersonalData" Type="Team2_FRESHERSPOOLModel.CA_PersonalData" Multiplicity="1" />
+          <End Role="CA_Academics" Type="Team2_FRESHERSPOOLModel.CA_Academics" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="CA_PersonalData">
+              <PropertyRef Name="CandidateID" />
+            </Principal>
+            <Dependent Role="CA_Academics">
+              <PropertyRef Name="CandidateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Academics_CO_College1_Grad">
+          <End Role="CO_College" Type="Team2_FRESHERSPOOLModel.CO_College" Multiplicity="1" />
+          <End Role="CA_Academics" Type="Team2_FRESHERSPOOLModel.CA_Academics" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CO_College">
+              <PropertyRef Name="CollegeID" />
+            </Principal>
+            <Dependent Role="CA_Academics">
+              <PropertyRef Name="Tenth_School" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Academics_CO_College2_Inter">
+          <End Role="CO_College" Type="Team2_FRESHERSPOOLModel.CO_College" Multiplicity="0..1" />
+          <End Role="CA_Academics" Type="Team2_FRESHERSPOOLModel.CA_Academics" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CO_College">
+              <PropertyRef Name="CollegeID" />
+            </Principal>
+            <Dependent Role="CA_Academics">
+              <PropertyRef Name="Inter_College" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Academics_MS_StreamMaster">
+          <End Role="MS_StreamMaster" Type="Team2_FRESHERSPOOLModel.MS_StreamMaster" Multiplicity="1" />
+          <End Role="CA_Academics" Type="Team2_FRESHERSPOOLModel.CA_Academics" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_StreamMaster">
+              <PropertyRef Name="StreamID" />
+            </Principal>
+            <Dependent Role="CA_Academics">
+              <PropertyRef Name="Grad_Stream" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Academics_MS_StreamMaster1">
+          <End Role="MS_StreamMaster" Type="Team2_FRESHERSPOOLModel.MS_StreamMaster" Multiplicity="1" />
+          <End Role="CA_Academics" Type="Team2_FRESHERSPOOLModel.CA_Academics" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_StreamMaster">
+              <PropertyRef Name="StreamID" />
+            </Principal>
+            <Dependent Role="CA_Academics">
+              <PropertyRef Name="Inter_Stream" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Academics_MS_StreamMaster2">
+          <End Role="MS_StreamMaster" Type="Team2_FRESHERSPOOLModel.MS_StreamMaster" Multiplicity="0..1" />
+          <End Role="CA_Academics" Type="Team2_FRESHERSPOOLModel.CA_Academics" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_StreamMaster">
+              <PropertyRef Name="StreamID" />
+            </Principal>
+            <Dependent Role="CA_Academics">
+              <PropertyRef Name="PG_Stream" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Languages_CA_Languages">
+          <End Role="MS_LanguageMaster" Type="Team2_FRESHERSPOOLModel.MS_LanguageMaster" Multiplicity="1" />
+          <End Role="CA_Languages" Type="Team2_FRESHERSPOOLModel.CA_Languages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_LanguageMaster">
+              <PropertyRef Name="LanguageID" />
+            </Principal>
+            <Dependent Role="CA_Languages">
+              <PropertyRef Name="LanguageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Languages_CA_PersonalData">
+          <End Role="CA_PersonalData" Type="Team2_FRESHERSPOOLModel.CA_PersonalData" Multiplicity="1" />
+          <End Role="CA_Languages" Type="Team2_FRESHERSPOOLModel.CA_Languages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CA_PersonalData">
+              <PropertyRef Name="CandidateID" />
+            </Principal>
+            <Dependent Role="CA_Languages">
+              <PropertyRef Name="CandidateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_MentorRatings_CA_PersonalData">
+          <End Role="CA_PersonalData" Type="Team2_FRESHERSPOOLModel.CA_PersonalData" Multiplicity="1" />
+          <End Role="CA_MentorRatings" Type="Team2_FRESHERSPOOLModel.CA_MentorRatings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CA_PersonalData">
+              <PropertyRef Name="CandidateID" />
+            </Principal>
+            <Dependent Role="CA_MentorRatings">
+              <PropertyRef Name="CandidateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_PersonalData_CA_PersonalData">
+          <End Role="MS_LanguageMaster" Type="Team2_FRESHERSPOOLModel.MS_LanguageMaster" Multiplicity="1" />
+          <End Role="CA_PersonalData" Type="Team2_FRESHERSPOOLModel.CA_PersonalData" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_LanguageMaster">
+              <PropertyRef Name="LanguageID" />
+            </Principal>
+            <Dependent Role="CA_PersonalData">
+              <PropertyRef Name="MotherTongue" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Skills_CA_PersonalData">
+          <End Role="CA_PersonalData" Type="Team2_FRESHERSPOOLModel.CA_PersonalData" Multiplicity="1" />
+          <End Role="CA_Skills" Type="Team2_FRESHERSPOOLModel.CA_Skills" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CA_PersonalData">
+              <PropertyRef Name="CandidateID" />
+            </Principal>
+            <Dependent Role="CA_Skills">
+              <PropertyRef Name="CandidateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EM_JobPostings_Shortlistings_EM_JobPostings_Shortlistings1">
+          <End Role="CA_PersonalData" Type="Team2_FRESHERSPOOLModel.CA_PersonalData" Multiplicity="1" />
+          <End Role="EM_JobPostings_Shortlistings" Type="Team2_FRESHERSPOOLModel.EM_JobPostings_Shortlistings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CA_PersonalData">
+              <PropertyRef Name="CandidateID" />
+            </Principal>
+            <Dependent Role="EM_JobPostings_Shortlistings">
+              <PropertyRef Name="CandidateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_PlacementHistory_MS_DriveMaster">
+          <End Role="MS_DriveMaster" Type="Team2_FRESHERSPOOLModel.MS_DriveMaster" Multiplicity="1" />
+          <End Role="CA_PlacementHistory" Type="Team2_FRESHERSPOOLModel.CA_PlacementHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_DriveMaster">
+              <PropertyRef Name="DriveType" />
+            </Principal>
+            <Dependent Role="CA_PlacementHistory">
+              <PropertyRef Name="DriveType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_PlacementHistory_MS_ResultMaster">
+          <End Role="MS_ResultMaster" Type="Team2_FRESHERSPOOLModel.MS_ResultMaster" Multiplicity="1" />
+          <End Role="CA_PlacementHistory" Type="Team2_FRESHERSPOOLModel.CA_PlacementHistory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_ResultMaster">
+              <PropertyRef Name="Result" />
+            </Principal>
+            <Dependent Role="CA_PlacementHistory">
+              <PropertyRef Name="Result" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_RolePreferences_MS_RoleMaster">
+          <End Role="MS_RoleMaster" Type="Team2_FRESHERSPOOLModel.MS_RoleMaster" Multiplicity="1" />
+          <End Role="CA_RolePreferences" Type="Team2_FRESHERSPOOLModel.CA_RolePreferences" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_RoleMaster">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="CA_RolePreferences">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Skills_MS_SkillLevelMaster">
+          <End Role="MS_SkillLevelMaster" Type="Team2_FRESHERSPOOLModel.MS_SkillLevelMaster" Multiplicity="1" />
+          <End Role="CA_Skills" Type="Team2_FRESHERSPOOLModel.CA_Skills" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_SkillLevelMaster">
+              <PropertyRef Name="SkillLevelID" />
+            </Principal>
+            <Dependent Role="CA_Skills">
+              <PropertyRef Name="SkillLevelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CA_Skills_MS_SkillMaster">
+          <End Role="MS_SkillMaster" Type="Team2_FRESHERSPOOLModel.MS_SkillMaster" Multiplicity="1" />
+          <End Role="CA_Skills" Type="Team2_FRESHERSPOOLModel.CA_Skills" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_SkillMaster">
+              <PropertyRef Name="SkillID" />
+            </Principal>
+            <Dependent Role="CA_Skills">
+              <PropertyRef Name="SkillID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EM_JobPostings_EM_EmployerData">
+          <End Role="EM_EmployerData" Type="Team2_FRESHERSPOOLModel.EM_EmployerData" Multiplicity="1" />
+          <End Role="EM_JobPostings" Type="Team2_FRESHERSPOOLModel.EM_JobPostings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EM_EmployerData">
+              <PropertyRef Name="EmployerID" />
+            </Principal>
+            <Dependent Role="EM_JobPostings">
+              <PropertyRef Name="EmployerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EM_JobPostings_MS_CityMaster1">
+          <End Role="MS_CityMaster" Type="Team2_FRESHERSPOOLModel.MS_CityMaster" Multiplicity="1" />
+          <End Role="EM_JobPostings" Type="Team2_FRESHERSPOOLModel.EM_JobPostings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_CityMaster">
+              <PropertyRef Name="CityID" />
+            </Principal>
+            <Dependent Role="EM_JobPostings">
+              <PropertyRef Name="CityID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EM_JobPostings_MS_DriveMaster">
+          <End Role="MS_DriveMaster" Type="Team2_FRESHERSPOOLModel.MS_DriveMaster" Multiplicity="1" />
+          <End Role="EM_JobPostings" Type="Team2_FRESHERSPOOLModel.EM_JobPostings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_DriveMaster">
+              <PropertyRef Name="DriveType" />
+            </Principal>
+            <Dependent Role="EM_JobPostings">
+              <PropertyRef Name="DriveType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EM_JobPostings_MS_RoleMaster">
+          <End Role="MS_RoleMaster" Type="Team2_FRESHERSPOOLModel.MS_RoleMaster" Multiplicity="1" />
+          <End Role="EM_JobPostings" Type="Team2_FRESHERSPOOLModel.EM_JobPostings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_RoleMaster">
+              <PropertyRef Name="RoleID" />
+            </Principal>
+            <Dependent Role="EM_JobPostings">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EM_JobPostings_Shortlistings_MS_ResultMaster">
+          <End Role="MS_ResultMaster" Type="Team2_FRESHERSPOOLModel.MS_ResultMaster" Multiplicity="1" />
+          <End Role="EM_JobPostings_Shortlistings" Type="Team2_FRESHERSPOOLModel.EM_JobPostings_Shortlistings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MS_ResultMaster">
+              <PropertyRef Name="Result" />
+            </Principal>
+            <Dependent Role="EM_JobPostings_Shortlistings">
+              <PropertyRef Name="Result" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Team2_FRESHERSPOOLModelStoreContainer" CdmEntityContainer="Team2_FRESHERSPOOLEntities">
+          <EntitySetMapping Name="CA_Academics">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.CA_Academics">
+              <MappingFragment StoreEntitySet="CA_Academics">
+                <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
+                <ScalarProperty Name="PG_Qual" ColumnName="PG_Qual" />
+                <ScalarProperty Name="PG_Stream" ColumnName="PG_Stream" />
+                <ScalarProperty Name="PG_PassPercentage" ColumnName="PG_PassPercentage" />
+                <ScalarProperty Name="PG_PassingYear" ColumnName="PG_PassingYear" />
+                <ScalarProperty Name="PG_College" ColumnName="PG_College" />
+                <ScalarProperty Name="Grad_Qual" ColumnName="Grad_Qual" />
+                <ScalarProperty Name="Grad_Stream" ColumnName="Grad_Stream" />
+                <ScalarProperty Name="Grad_PassPercentage" ColumnName="Grad_PassPercentage" />
+                <ScalarProperty Name="Grad_PassingYear" ColumnName="Grad_PassingYear" />
+                <ScalarProperty Name="Grad_College" ColumnName="Grad_College" />
+                <ScalarProperty Name="Inter_Board" ColumnName="Inter_Board" />
+                <ScalarProperty Name="Inter_Stream" ColumnName="Inter_Stream" />
+                <ScalarProperty Name="Inter_PassPercentage" ColumnName="Inter_PassPercentage" />
+                <ScalarProperty Name="Inter_PassingYear" ColumnName="Inter_PassingYear" />
+                <ScalarProperty Name="Inter_College" ColumnName="Inter_College" />
+                <ScalarProperty Name="Tenth_Board" ColumnName="Tenth_Board" />
+                <ScalarProperty Name="Tenth_PassPercentage" ColumnName="Tenth_PassPercentage" />
+                <ScalarProperty Name="Tenth_PassingYear" ColumnName="Tenth_PassingYear" />
+                <ScalarProperty Name="Tenth_School" ColumnName="Tenth_School" />
+                <ScalarProperty Name="AnyGaps" ColumnName="AnyGaps" />
+                <ScalarProperty Name="AnyBacklogs" ColumnName="AnyBacklogs" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CA_JobPreferences">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.CA_JobPreferences">
+              <MappingFragment StoreEntitySet="CA_JobPreferences">
+                <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
+                <ScalarProperty Name="SignBond" ColumnName="SignBond" />
+                <ScalarProperty Name="NightShifts" ColumnName="NightShifts" />
+                <ScalarProperty Name="Relocate" ColumnName="Relocate" />
+                <ScalarProperty Name="RelocationCity1" ColumnName="RelocationCity1" />
+                <ScalarProperty Name="RelocationCity2" ColumnName="RelocationCity2" />
+                <ScalarProperty Name="RelocationCity3" ColumnName="RelocationCity3" />
+                <ScalarProperty Name="RelocationCity4" ColumnName="RelocationCity4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CA_Languages">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.CA_Languages">
+              <MappingFragment StoreEntitySet="CA_Languages">
+                <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
+                <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="Speak" ColumnName="Speak" />
+                <ScalarProperty Name="Reads" ColumnName="Reads" />
+                <ScalarProperty Name="Write" ColumnName="Write" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CA_MentorRatings">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.CA_MentorRatings">
+              <MappingFragment StoreEntitySet="CA_MentorRatings">
+                <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
+                <ScalarProperty Name="TestID" ColumnName="TestID" />
+                <ScalarProperty Name="Personality" ColumnName="Personality" />
+                <ScalarProperty Name="Communication" ColumnName="Communication" />
+                <ScalarProperty Name="ConfidenceLevels" ColumnName="ConfidenceLevels" />
+                <ScalarProperty Name="English" ColumnName="English" />
+                <ScalarProperty Name="GeneralAptitude" ColumnName="GeneralAptitude" />
+                <ScalarProperty Name="AnalyticalAbilities" ColumnName="AnalyticalAbilities" />
+                <ScalarProperty Name="MentorRemarks1" ColumnName="MentorRemarks1" />
+                <ScalarProperty Name="MentorRemarks2" ColumnName="MentorRemarks2" />
+                <ScalarProperty Name="MentorRemarks3" ColumnName="MentorRemarks3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CA_PersonalData">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.CA_PersonalData">
+              <MappingFragment StoreEntitySet="CA_PersonalData">
+                <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="YearsofExperience" ColumnName="YearsofExperience" />
+                <ScalarProperty Name="CurrentLocation" ColumnName="CurrentLocation" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PrimaryEmail" ColumnName="PrimaryEmail" />
+                <ScalarProperty Name="SecondaryEmail" ColumnName="SecondaryEmail" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="LandlineNo" ColumnName="LandlineNo" />
+                <ScalarProperty Name="ApplicationDate" ColumnName="ApplicationDate" />
+                <ScalarProperty Name="MotherTongue" ColumnName="MotherTongue" />
+                <ScalarProperty Name="UniversityID" ColumnName="UniversityID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CA_PlacementHistory">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.CA_PlacementHistory">
+              <MappingFragment StoreEntitySet="CA_PlacementHistory">
+                <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
+                <ScalarProperty Name="JobID" ColumnName="JobID" />
+                <ScalarProperty Name="EmployerID" ColumnName="EmployerID" />
+                <ScalarProperty Name="DriveType" ColumnName="DriveType" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="DrivePlace" ColumnName="DrivePlace" />
+                <ScalarProperty Name="Result" ColumnName="Result" />
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CA_ProfessionalCourses">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.CA_ProfessionalCourses">
+              <MappingFragment StoreEntitySet="CA_ProfessionalCourses">
+                <ScalarProperty Name="PCNo" ColumnName="PCNo" />
+                <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
+                <ScalarProperty Name="Particulars" ColumnName="Particulars" />
+                <ScalarProperty Name="Institution" ColumnName="Institution" />
+                <ScalarProperty Name="Place" ColumnName="Place" />
+                <ScalarProperty Name="FromDT" ColumnName="FromDT" />
+                <ScalarProperty Name="ToDT" ColumnName="ToDT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CA_RolePreferences">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.CA_RolePreferences">
+              <MappingFragment StoreEntitySet="CA_RolePreferences">
+                <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CA_Skills">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.CA_Skills">
+              <MappingFragment StoreEntitySet="CA_Skills">
+                <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
+                <ScalarProperty Name="SkillID" ColumnName="SkillID" />
+                <ScalarProperty Name="SkillLevelID" ColumnName="SkillLevelID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CO_College">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.CO_College">
+              <MappingFragment StoreEntitySet="CO_College">
+                <ScalarProperty Name="CollegeID" ColumnName="CollegeID" />
+                <ScalarProperty Name="CollegeName" ColumnName="CollegeName" />
+                <ScalarProperty Name="CollegeCode" ColumnName="CollegeCode" />
+                <ScalarProperty Name="CollegeEmail" ColumnName="CollegeEmail" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="YearStarted" ColumnName="YearStarted" />
+                <ScalarProperty Name="TpoName" ColumnName="TpoName" />
+                <ScalarProperty Name="TpoMobile" ColumnName="TpoMobile" />
+                <ScalarProperty Name="TpoEmail" ColumnName="TpoEmail" />
+                <ScalarProperty Name="CollegePhone" ColumnName="CollegePhone" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+                <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Pin" ColumnName="Pin" />
+                <ScalarProperty Name="CollegeLogo" ColumnName="CollegeLogo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EM_EmployerData">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.EM_EmployerData">
+              <MappingFragment StoreEntitySet="EM_EmployerData">
+                <ScalarProperty Name="EmployerID" ColumnName="EmployerID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="HeadQuarters" ColumnName="HeadQuarters" />
+                <ScalarProperty Name="Founder" ColumnName="Founder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Domain" ColumnName="Domain" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="CompanyEmail" ColumnName="CompanyEmail" />
+                <ScalarProperty Name="ContactNumber" ColumnName="ContactNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EM_JobPostings">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.EM_JobPostings">
+              <MappingFragment StoreEntitySet="EM_JobPostings">
+                <ScalarProperty Name="JobID" ColumnName="JobID" />
+                <ScalarProperty Name="EmployerID" ColumnName="EmployerID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="StreamID" ColumnName="StreamID" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+                <ScalarProperty Name="DriveType" ColumnName="DriveType" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EM_JobPostings_Shortlistings">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.EM_JobPostings_Shortlistings">
+              <MappingFragment StoreEntitySet="EM_JobPostings_Shortlistings">
+                <ScalarProperty Name="JobID" ColumnName="JobID" />
+                <ScalarProperty Name="CandidateID" ColumnName="CandidateID" />
+                <ScalarProperty Name="Result" ColumnName="Result" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EM_JobPostings_Skillset">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.EM_JobPostings_Skillset">
+              <MappingFragment StoreEntitySet="EM_JobPostings_Skillset">
+                <ScalarProperty Name="JobID" ColumnName="JobID" />
+                <ScalarProperty Name="SkillID" ColumnName="SkillID" />
+                <ScalarProperty Name="SkillLevelID" ColumnName="SkillLevelID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MS_CityMaster">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.MS_CityMaster">
+              <MappingFragment StoreEntitySet="MS_CityMaster">
+                <ScalarProperty Name="CityID" ColumnName="CityID" />
+                <ScalarProperty Name="CityName" ColumnName="CityName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MS_DriveMaster">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.MS_DriveMaster">
+              <MappingFragment StoreEntitySet="MS_DriveMaster">
+                <ScalarProperty Name="DriveType" ColumnName="DriveType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MS_LanguageMaster">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.MS_LanguageMaster">
+              <MappingFragment StoreEntitySet="MS_LanguageMaster">
+                <ScalarProperty Name="LanguageID" ColumnName="LanguageID" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MS_ResultMaster">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.MS_ResultMaster">
+              <MappingFragment StoreEntitySet="MS_ResultMaster">
+                <ScalarProperty Name="Result" ColumnName="Result" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MS_RoleMaster">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.MS_RoleMaster">
+              <MappingFragment StoreEntitySet="MS_RoleMaster">
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="RoleDesc" ColumnName="RoleDesc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MS_SkillLevelMaster">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.MS_SkillLevelMaster">
+              <MappingFragment StoreEntitySet="MS_SkillLevelMaster">
+                <ScalarProperty Name="SkillLevelID" ColumnName="SkillLevelID" />
+                <ScalarProperty Name="SkillDesc" ColumnName="SkillDesc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MS_SkillMaster">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.MS_SkillMaster">
+              <MappingFragment StoreEntitySet="MS_SkillMaster">
+                <ScalarProperty Name="SkillID" ColumnName="SkillID" />
+                <ScalarProperty Name="SkillDesc" ColumnName="SkillDesc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MS_StreamMaster">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.MS_StreamMaster">
+              <MappingFragment StoreEntitySet="MS_StreamMaster">
+                <ScalarProperty Name="StreamID" ColumnName="StreamID" />
+                <ScalarProperty Name="StreamDesc" ColumnName="StreamDesc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Team2_FRESHERSPOOLModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

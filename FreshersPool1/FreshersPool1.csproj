@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1C8F0281-02BC-48B1-AF98-D363783E6E04}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FreshersPool1</RootNamespace>
+    <AssemblyName>FreshersPool1</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.3.0.20105.1\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.1.0.20105.408\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CA_AcademicsController.cs" />
+    <Compile Include="Controllers\CA_LanguagesController.cs" />
+    <Compile Include="Controllers\CA_MentorRatingsController.cs" />
+    <Compile Include="Controllers\CA_PersonalDataController.cs" />
+    <Compile Include="Controllers\CA_PlacementHistoryController.cs" />
+    <Compile Include="Controllers\CA_ProfessionalCoursesController.cs" />
+    <Compile Include="Controllers\CA_RolePreferencesController.cs" />
+    <Compile Include="Controllers\CA_SkillsController.cs" />
+    <Compile Include="Controllers\EM_EmployerDataController.cs" />
+    <Compile Include="Controllers\EM_JobPostingsController.cs" />
+    <Compile Include="Controllers\EM_JobPostings_ShortlistingsController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\CA_Academics.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CA_JobPreferences.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CA_Languages.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CA_MentorRatings.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CA_PersonalData.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CA_PlacementHistory.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CA_ProfessionalCourses.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CA_RolePreferences.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CA_Skills.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CO_College.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EM_EmployerData.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EM_JobPostings.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EM_JobPostings_Shortlistings.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EM_JobPostings_Skillset.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FreshersPool.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FreshersPool.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FreshersPool.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FreshersPool.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FreshersPool.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MS_CityMaster.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MS_DriveMaster.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MS_LanguageMaster.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MS_ResultMaster.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MS_RoleMaster.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MS_SkillLevelMaster.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MS_SkillMaster.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MS_StreamMaster.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>FreshersPool.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\component.css" />
+    <Content Include="ecoicons\ecoicons.dev.svg" />
+    <Content Include="ecoicons\ecoicons.svg" />
+    <Content Include="ecoicons\license.txt" />
+    <Content Include="ecoicons\Read Me.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="js\classie.js" />
+    <Content Include="js\gnmenu.js" />
+    <Content Include="js\modernizr.custom.js" />
+    <Content Include="ecoicons\ecoicons.eot" />
+    <Content Include="ecoicons\ecoicons.ttf" />
+    <Content Include="ecoicons\ecoicons.woff" />
+    <EntityDeploy Include="Models\FreshersPool.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FreshersPool.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\FreshersPool.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FreshersPool.edmx</DependentUpon>
+      <LastGenOutput>FreshersPool.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\FreshersPool.edmx.diagram">
+      <DependentUpon>FreshersPool.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\FreshersPool.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FreshersPool.edmx</DependentUpon>
+      <LastGenOutput>FreshersPool.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="css\foundation.css" />
+    <Content Include="css\foundation.min.css" />
+    <Content Include="css\normalize.css" />
+    <Content Include="js\foundation.min.js" />
+    <Content Include="js\foundation\foundation.abide.js" />
+    <Content Include="js\foundation\foundation.alerts.js" />
+    <Content Include="js\foundation\foundation.clearing.js" />
+    <Content Include="js\foundation\foundation.cookie.js" />
+    <Content Include="js\foundation\foundation.dropdown.js" />
+    <Content Include="js\foundation\foundation.forms.js" />
+    <Content Include="js\foundation\foundation.interchange.js" />
+    <Content Include="js\foundation\foundation.joyride.js" />
+    <Content Include="js\foundation\foundation.js" />
+    <Content Include="js\foundation\foundation.magellan.js" />
+    <Content Include="js\foundation\foundation.orbit.js" />
+    <Content Include="js\foundation\foundation.placeholder.js" />
+    <Content Include="js\foundation\foundation.reveal.js" />
+    <Content Include="js\foundation\foundation.section.js" />
+    <Content Include="js\foundation\foundation.tooltips.js" />
+    <Content Include="js\foundation\foundation.topbar.js" />
+    <Content Include="js\vendor\custom.modernizr.js" />
+    <Content Include="js\vendor\jquery.js" />
+    <Content Include="js\vendor\zepto.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
+    <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
+    <Content Include="Views\Account\LogOn.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\CA_JobPreferences\Index.cshtml" />
+    <Content Include="Views\CA_JobPreferences\Details.cshtml" />
+    <Content Include="Views\CA_JobPreferences\Create.cshtml" />
+    <Content Include="Views\CA_JobPreferences\Edit.cshtml" />
+    <Content Include="Views\CA_JobPreferences\Delete.cshtml" />
+    <Content Include="Views\CA_Languages\Index.cshtml" />
+    <Content Include="Views\CA_Languages\Details.cshtml" />
+    <Content Include="Views\CA_Languages\Create.cshtml" />
+    <Content Include="Views\CA_Languages\Edit.cshtml" />
+    <Content Include="Views\CA_Languages\Delete.cshtml" />
+    <Content Include="Views\CA_MentorRatings\Index.cshtml" />
+    <Content Include="Views\CA_MentorRatings\Details.cshtml" />
+    <Content Include="Views\CA_MentorRatings\Create.cshtml" />
+    <Content Include="Views\CA_MentorRatings\Edit.cshtml" />
+    <Content Include="Views\CA_MentorRatings\Delete.cshtml" />
+    <Content Include="Views\CA_PlacementHistory\Index.cshtml" />
+    <Content Include="Views\CA_PlacementHistory\Details.cshtml" />
+    <Content Include="Views\CA_PlacementHistory\Create.cshtml" />
+    <Content Include="Views\CA_PlacementHistory\Edit.cshtml" />
+    <Content Include="Views\CA_PlacementHistory\Delete.cshtml" />
+    <Content Include="Views\CA_ProfessionalCourses\Index.cshtml" />
+    <Content Include="Views\CA_ProfessionalCourses\Details.cshtml" />
+    <Content Include="Views\CA_ProfessionalCourses\Create.cshtml" />
+    <Content Include="Views\CA_ProfessionalCourses\Edit.cshtml" />
+    <Content Include="Views\CA_ProfessionalCourses\Delete.cshtml" />
+    <Content Include="Views\CA_RolePreferences\Index.cshtml" />
+    <Content Include="Views\CA_RolePreferences\Details.cshtml" />
+    <Content Include="Views\CA_RolePreferences\Create.cshtml" />
+    <Content Include="Views\CA_RolePreferences\Edit.cshtml" />
+    <Content Include="Views\CA_RolePreferences\Delete.cshtml" />
+    <Content Include="Views\CA_Skills\Index.cshtml" />
+    <Content Include="Views\CA_Skills\Details.cshtml" />
+    <Content Include="Views\CA_Skills\Create.cshtml" />
+    <Content Include="Views\CA_Skills\Edit.cshtml" />
+    <Content Include="Views\CA_Skills\Delete.cshtml" />
+    <Content Include="Views\CO_College\Index.cshtml" />
+    <Content Include="Views\CO_College\Details.cshtml" />
+    <Content Include="Views\CO_College\Create.cshtml" />
+    <Content Include="Views\CO_College\Edit.cshtml" />
+    <Content Include="Views\CO_College\Delete.cshtml" />
+    <Content Include="Views\EM_JobPostings\Index.cshtml" />
+    <Content Include="Views\EM_JobPostings\Details.cshtml" />
+    <Content Include="Views\EM_JobPostings\Create.cshtml" />
+    <Content Include="Views\EM_JobPostings\Edit.cshtml" />
+    <Content Include="Views\EM_JobPostings\Delete.cshtml" />
+    <Content Include="Views\EM_JobPostings_Shortlistings\Index.cshtml" />
+    <Content Include="Views\EM_JobPostings_Shortlistings\Details.cshtml" />
+    <Content Include="Views\EM_JobPostings_Shortlistings\Create.cshtml" />
+    <Content Include="Views\EM_JobPostings_Shortlistings\Edit.cshtml" />
+    <Content Include="Views\EM_JobPostings_Shortlistings\Delete.cshtml" />
+    <Content Include="Views\EM_JobPostings_Skillset\Index.cshtml" />
+    <Content Include="Views\EM_JobPostings_Skillset\Details.cshtml" />
+    <Content Include="Views\EM_JobPostings_Skillset\Create.cshtml" />
+    <Content Include="Views\EM_JobPostings_Skillset\Edit.cshtml" />
+    <Content Include="Views\EM_JobPostings_Skillset\Delete.cshtml" />
+    <Content Include="Views\CA_PersonalData\Index.cshtml" />
+    <Content Include="Views\CA_PersonalData\Details.cshtml" />
+    <Content Include="Views\CA_PersonalData\Edit.cshtml" />
+    <Content Include="Views\CA_PersonalData\Delete.cshtml" />
+    <Content Include="Views\EM_EmployerData\Index.cshtml" />
+    <Content Include="Views\EM_EmployerData\Details.cshtml" />
+    <Content Include="Views\EM_EmployerData\Create.cshtml" />
+    <Content Include="Views\EM_EmployerData\Edit.cshtml" />
+    <Content Include="Views\EM_EmployerData\Delete.cshtml" />
+    <Content Include="Freshers\Index.cshtml" />
+    <Content Include="Freshers\Error.cshtml" />
+    <Content Include="Recruiters\Error.cshtml" />
+    <Content Include="Recruiters\Index.cshtml" />
+    <Content Include="Views\EM_JobPostings\appliedCandidates.cshtml" />
+    <Content Include="Views\EM_JobPostings\ViewApplied.cshtml" />
+    <Content Include="Views\EM_JobPostings\AppliedJobs.cshtml" />
+    <Content Include="Views\EM_JobPostings\searchView.cshtml" />
+    <Content Include="Views\CA_Academics\Index.cshtml" />
+    <Content Include="Views\CA_Academics\Details.cshtml" />
+    <Content Include="Views\CA_Academics\Create.cshtml" />
+    <Content Include="Views\CA_Academics\Edit.cshtml" />
+    <Content Include="Views\CA_Academics\Delete.cshtml" />
+    <Content Include="Views\CA_PersonalData\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3361/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

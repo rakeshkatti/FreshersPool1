@@ -1,0 +1,128 @@
+﻿@model FreshersPool1.Models.CA_Academics
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>CA_Academics</legend>
+
+    <div class="display-label">CA_PersonalData</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CA_PersonalData.FirstName)
+    </div>
+
+    <div class="display-label">PG_Qual</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PG_Qual)
+    </div>
+
+    <div class="display-label">MS_StreamMaster2</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_StreamMaster2.StreamDesc)
+    </div>
+
+    <div class="display-label">PG_PassPercentage</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PG_PassPercentage)
+    </div>
+
+    <div class="display-label">PG_PassingYear</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PG_PassingYear)
+    </div>
+
+    <div class="display-label">PG_College</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PG_College)
+    </div>
+
+    <div class="display-label">Grad_Qual</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Grad_Qual)
+    </div>
+
+    <div class="display-label">MS_StreamMaster</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_StreamMaster.StreamDesc)
+    </div>
+
+    <div class="display-label">Grad_PassPercentage</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Grad_PassPercentage)
+    </div>
+
+    <div class="display-label">Grad_PassingYear</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Grad_PassingYear)
+    </div>
+
+    <div class="display-label">Grad_College</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Grad_College)
+    </div>
+
+    <div class="display-label">Inter_Board</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Inter_Board)
+    </div>
+
+    <div class="display-label">MS_StreamMaster1</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_StreamMaster1.StreamDesc)
+    </div>
+
+    <div class="display-label">Inter_PassPercentage</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Inter_PassPercentage)
+    </div>
+
+    <div class="display-label">Inter_PassingYear</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Inter_PassingYear)
+    </div>
+
+    <div class="display-label">CO_College1</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CO_College1.CollegeName)
+    </div>
+
+    <div class="display-label">Tenth_Board</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tenth_Board)
+    </div>
+
+    <div class="display-label">Tenth_PassPercentage</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tenth_PassPercentage)
+    </div>
+
+    <div class="display-label">Tenth_PassingYear</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Tenth_PassingYear)
+    </div>
+
+    <div class="display-label">CO_College</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CO_College.CollegeName)
+    </div>
+
+    <div class="display-label">AnyGaps</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AnyGaps)
+    </div>
+
+    <div class="display-label">AnyBacklogs</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AnyBacklogs)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

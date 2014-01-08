@@ -1,0 +1,45 @@
+﻿@model FreshersPool1.Models.CA_Languages
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CA_Languages</legend>
+
+    <div class="display-label">CA_PersonalData</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CA_PersonalData.FirstName)
+    </div>
+
+    <div class="display-label">MS_LanguageMaster</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_LanguageMaster.Language)
+    </div>
+
+    <div class="display-label">Language</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Language)
+    </div>
+
+    <div class="display-label">Speak</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Speak)
+    </div>
+
+    <div class="display-label">Reads</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Reads)
+    </div>
+
+    <div class="display-label">Write</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Write)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

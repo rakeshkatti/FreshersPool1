@@ -1,0 +1,93 @@
+﻿@model IEnumerable<FreshersPool1.Models.CA_MentorRatings>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            CA_PersonalData
+        </th>
+        <th>
+            TestID
+        </th>
+        <th>
+            Personality
+        </th>
+        <th>
+            Communication
+        </th>
+        <th>
+            ConfidenceLevels
+        </th>
+        <th>
+            English
+        </th>
+        <th>
+            GeneralAptitude
+        </th>
+        <th>
+            AnalyticalAbilities
+        </th>
+        <th>
+            MentorRemarks1
+        </th>
+        <th>
+            MentorRemarks2
+        </th>
+        <th>
+            MentorRemarks3
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CA_PersonalData.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TestID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Personality)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Communication)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConfidenceLevels)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.English)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GeneralAptitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnalyticalAbilities)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MentorRemarks1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MentorRemarks2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MentorRemarks3)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

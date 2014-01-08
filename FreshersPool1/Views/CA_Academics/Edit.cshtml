@@ -1,0 +1,201 @@
+﻿@model FreshersPool1.Models.CA_Academics
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>CA_Academics</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CandidateID, "CA_PersonalData")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("CandidateID", String.Empty)
+            @Html.ValidationMessageFor(model => model.CandidateID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PG_Qual)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PG_Qual)
+            @Html.ValidationMessageFor(model => model.PG_Qual)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PG_Stream, "MS_StreamMaster2")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("PG_Stream", String.Empty)
+            @Html.ValidationMessageFor(model => model.PG_Stream)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PG_PassPercentage)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PG_PassPercentage)
+            @Html.ValidationMessageFor(model => model.PG_PassPercentage)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PG_PassingYear)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PG_PassingYear)
+            @Html.ValidationMessageFor(model => model.PG_PassingYear)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PG_College)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PG_College)
+            @Html.ValidationMessageFor(model => model.PG_College)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Grad_Qual)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Grad_Qual)
+            @Html.ValidationMessageFor(model => model.Grad_Qual)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Grad_Stream, "MS_StreamMaster")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Grad_Stream", String.Empty)
+            @Html.ValidationMessageFor(model => model.Grad_Stream)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Grad_PassPercentage)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Grad_PassPercentage)
+            @Html.ValidationMessageFor(model => model.Grad_PassPercentage)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Grad_PassingYear)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Grad_PassingYear)
+            @Html.ValidationMessageFor(model => model.Grad_PassingYear)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Grad_College)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Grad_College)
+            @Html.ValidationMessageFor(model => model.Grad_College)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Inter_Board)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Inter_Board)
+            @Html.ValidationMessageFor(model => model.Inter_Board)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Inter_Stream, "MS_StreamMaster1")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Inter_Stream", String.Empty)
+            @Html.ValidationMessageFor(model => model.Inter_Stream)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Inter_PassPercentage)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Inter_PassPercentage)
+            @Html.ValidationMessageFor(model => model.Inter_PassPercentage)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Inter_PassingYear)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Inter_PassingYear)
+            @Html.ValidationMessageFor(model => model.Inter_PassingYear)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Inter_College, "CO_College1")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Inter_College", String.Empty)
+            @Html.ValidationMessageFor(model => model.Inter_College)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Tenth_Board)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Tenth_Board)
+            @Html.ValidationMessageFor(model => model.Tenth_Board)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Tenth_PassPercentage)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Tenth_PassPercentage)
+            @Html.ValidationMessageFor(model => model.Tenth_PassPercentage)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Tenth_PassingYear)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Tenth_PassingYear)
+            @Html.ValidationMessageFor(model => model.Tenth_PassingYear)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Tenth_School, "CO_College")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("Tenth_School", String.Empty)
+            @Html.ValidationMessageFor(model => model.Tenth_School)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AnyGaps)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AnyGaps)
+            @Html.ValidationMessageFor(model => model.AnyGaps)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AnyBacklogs)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AnyBacklogs)
+            @Html.ValidationMessageFor(model => model.AnyBacklogs)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

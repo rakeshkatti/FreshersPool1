@@ -1,0 +1,70 @@
+﻿@model FreshersPool1.Models.CA_MentorRatings
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CA_MentorRatings</legend>
+
+    <div class="display-label">CA_PersonalData</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CA_PersonalData.FirstName)
+    </div>
+
+    <div class="display-label">TestID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TestID)
+    </div>
+
+    <div class="display-label">Personality</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Personality)
+    </div>
+
+    <div class="display-label">Communication</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Communication)
+    </div>
+
+    <div class="display-label">ConfidenceLevels</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ConfidenceLevels)
+    </div>
+
+    <div class="display-label">English</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.English)
+    </div>
+
+    <div class="display-label">GeneralAptitude</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.GeneralAptitude)
+    </div>
+
+    <div class="display-label">AnalyticalAbilities</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AnalyticalAbilities)
+    </div>
+
+    <div class="display-label">MentorRemarks1</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MentorRemarks1)
+    </div>
+
+    <div class="display-label">MentorRemarks2</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MentorRemarks2)
+    </div>
+
+    <div class="display-label">MentorRemarks3</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MentorRemarks3)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<FreshersPool1.Models.CA_ProfessionalCourses>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            PCNo
+        </th>
+        <th>
+            CA_PersonalData
+        </th>
+        <th>
+            Particulars
+        </th>
+        <th>
+            Institution
+        </th>
+        <th>
+            Place
+        </th>
+        <th>
+            FromDT
+        </th>
+        <th>
+            ToDT
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PCNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CA_PersonalData.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Particulars)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Institution)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Place)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FromDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ToDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5c24c1bb46554fa5bd7b1317f39384d6" Name="Diagram1">
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.CA_Academics" Width="1.5" PointX="8.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.CA_JobPreferences" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.CA_Languages" Width="1.5" PointX="5.25" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.CA_MentorRatings" Width="1.5" PointX="5.25" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.CA_PersonalData" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.CA_PlacementHistory" Width="1.5" PointX="11" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.CA_ProfessionalCourses" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.CA_RolePreferences" Width="1.5" PointX="11" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.CA_Skills" Width="1.5" PointX="5.25" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.CO_College" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.EM_EmployerData" Width="1.5" PointX="8.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.EM_JobPostings" Width="1.5" PointX="11" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.EM_JobPostings_Shortlistings" Width="1.5" PointX="5.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.EM_JobPostings_Skillset" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.MS_CityMaster" Width="1.5" PointX="8.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.MS_DriveMaster" Width="1.5" PointX="8.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.MS_LanguageMaster" Width="1.5" PointX="0.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.MS_ResultMaster" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.MS_RoleMaster" Width="1.5" PointX="8.75" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.MS_SkillLevelMaster" Width="1.5" PointX="3" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.MS_SkillMaster" Width="1.5" PointX="3" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.MS_StreamMaster" Width="1.5" PointX="6" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Team2_FRESHERSPOOLModel.sysdiagram" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_CA_Academics_CA_PersonalData" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_CA_Academics_CO_College1_Grad" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_CA_Academics_CO_College2_Inter" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_CA_Academics_MS_StreamMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_CA_Academics_MS_StreamMaster1" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_CA_Academics_MS_StreamMaster2" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_CA_Languages_CA_Languages" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_CA_Languages_CA_PersonalData" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_CA_MentorRatings_CA_PersonalData" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_CA_PersonalData_CA_PersonalData" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_CA_Skills_CA_PersonalData" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_Shortlistings_EM_JobPostings_Shortlistings1" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_CA_PlacementHistory_MS_DriveMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_CA_PlacementHistory_MS_ResultMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_CA_RolePreferences_MS_RoleMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_CA_Skills_MS_SkillLevelMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_CA_Skills_MS_SkillMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_EM_EmployerData" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_MS_CityMaster1" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_MS_DriveMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_MS_RoleMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="Team2_FRESHERSPOOLModel.FK_EM_JobPostings_Shortlistings_MS_ResultMaster" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

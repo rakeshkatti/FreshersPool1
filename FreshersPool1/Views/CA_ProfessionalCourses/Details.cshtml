@@ -1,0 +1,50 @@
+﻿@model FreshersPool1.Models.CA_ProfessionalCourses
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CA_ProfessionalCourses</legend>
+
+    <div class="display-label">PCNo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PCNo)
+    </div>
+
+    <div class="display-label">CA_PersonalData</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CA_PersonalData.FirstName)
+    </div>
+
+    <div class="display-label">Particulars</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Particulars)
+    </div>
+
+    <div class="display-label">Institution</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Institution)
+    </div>
+
+    <div class="display-label">Place</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Place)
+    </div>
+
+    <div class="display-label">FromDT</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FromDT)
+    </div>
+
+    <div class="display-label">ToDT</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ToDT)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

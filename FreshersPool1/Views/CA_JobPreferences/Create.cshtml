@@ -1,0 +1,89 @@
+﻿@model FreshersPool1.Models.CA_JobPreferences
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>CA_JobPreferences</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CandidateID, "CA_PersonalData")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("CandidateID", String.Empty)
+            @Html.ValidationMessageFor(model => model.CandidateID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SignBond)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SignBond)
+            @Html.ValidationMessageFor(model => model.SignBond)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.NightShifts)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.NightShifts)
+            @Html.ValidationMessageFor(model => model.NightShifts)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Relocate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Relocate)
+            @Html.ValidationMessageFor(model => model.Relocate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RelocationCity1, "MS_CityMaster")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("RelocationCity1", String.Empty)
+            @Html.ValidationMessageFor(model => model.RelocationCity1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RelocationCity2, "MS_CityMaster1")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("RelocationCity2", String.Empty)
+            @Html.ValidationMessageFor(model => model.RelocationCity2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RelocationCity3, "MS_CityMaster2")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("RelocationCity3", String.Empty)
+            @Html.ValidationMessageFor(model => model.RelocationCity3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RelocationCity4, "MS_CityMaster3")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("RelocationCity4", String.Empty)
+            @Html.ValidationMessageFor(model => model.RelocationCity4)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

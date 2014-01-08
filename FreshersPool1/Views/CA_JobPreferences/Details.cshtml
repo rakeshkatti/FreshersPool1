@@ -1,0 +1,55 @@
+﻿@model FreshersPool1.Models.CA_JobPreferences
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CA_JobPreferences</legend>
+
+    <div class="display-label">CA_PersonalData</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CA_PersonalData.FirstName)
+    </div>
+
+    <div class="display-label">SignBond</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SignBond)
+    </div>
+
+    <div class="display-label">NightShifts</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NightShifts)
+    </div>
+
+    <div class="display-label">Relocate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Relocate)
+    </div>
+
+    <div class="display-label">MS_CityMaster</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_CityMaster.CityName)
+    </div>
+
+    <div class="display-label">MS_CityMaster1</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_CityMaster1.CityName)
+    </div>
+
+    <div class="display-label">MS_CityMaster2</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_CityMaster2.CityName)
+    </div>
+
+    <div class="display-label">MS_CityMaster3</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_CityMaster3.CityName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

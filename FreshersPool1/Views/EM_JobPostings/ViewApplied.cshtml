@@ -1,0 +1,52 @@
+﻿@model IEnumerable<FreshersPool1.Models.EM_JobPostings_Shortlistings>
+
+@{
+    ViewBag.Title = "ViewApplied";
+}
+
+<h2>Index</h2>
+
+
+<table>
+    <tr>
+        <th>
+            EM_JobPostings
+        </th>
+        <th>
+            CA_PersonalData
+        </th>
+        <th>
+            MS_ResultMaster
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EM_JobPostings.EmployerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CA_PersonalData.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MS_ResultMaster.Result)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "../CA_PersonalData/Details", new { id=item.CandidateID }) |
+            @if(!(item.Result.ToString().Equals("Selected") || item.Result.ToString().Equals("Rejected"))){
+            <button class="button">@Html.ActionLink("Select", "../EM_JobPostings_ShortListings/ShortList", new { id = item.JobID , canID = item.CandidateID })</button>
+            <button class="button">@Html.ActionLink("Reject", "../EM_JobPostings_ShortListings/Reject", new { id = item.JobID , canID = item.CandidateID }) </button>
+            }
+            else if (item.Result.ToString().Equals("Selected"))
+            { 
+              <span>Candidate is already Selected</span>
+            }
+            else if (item.Result.ToString().Equals("Rejected")) { 
+                <span>Candidate is Rejected</span>
+            }
+        </td>
+    </tr>
+}
+
+</table>

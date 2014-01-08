@@ -1,0 +1,45 @@
+﻿@model IEnumerable<FreshersPool1.Models.EM_JobPostings>
+@{
+    ViewBag.Title = "AppliedJobs";
+}
+
+
+<link rel="stylesheet" href="../css/foundation.css">
+
+<table>
+ 
+@foreach (var item in Model) {
+     if (Session["applied" + item.JobID] != null)
+     {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StreamID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DriveType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            
+         <a data-reveal-id="myModal" >
+            View my Status
+         </a> 
+            <div id="myModal" class="reveal-modal"></div>
+           
+        </td>
+    </tr>
+     }
+}  
+
+
+
+</table>
+

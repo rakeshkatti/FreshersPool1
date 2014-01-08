@@ -1,0 +1,30 @@
+﻿@model FreshersPool1.Models.CA_RolePreferences
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CA_RolePreferences</legend>
+
+    <div class="display-label">CandidateID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CandidateID)
+    </div>
+
+    <div class="display-label">MS_RoleMaster</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_RoleMaster.RoleDesc)
+    </div>
+
+    <div class="display-label">Priority</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Priority)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,159 @@
+﻿@model IEnumerable<FreshersPool1.Models.CA_Academics>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            CA_PersonalData
+        </th>
+        <th>
+            PG_Qual
+        </th>
+        <th>
+            MS_StreamMaster2
+        </th>
+        <th>
+            PG_PassPercentage
+        </th>
+        <th>
+            PG_PassingYear
+        </th>
+        <th>
+            PG_College
+        </th>
+        <th>
+            Grad_Qual
+        </th>
+        <th>
+            MS_StreamMaster
+        </th>
+        <th>
+            Grad_PassPercentage
+        </th>
+        <th>
+            Grad_PassingYear
+        </th>
+        <th>
+            Grad_College
+        </th>
+        <th>
+            Inter_Board
+        </th>
+        <th>
+            MS_StreamMaster1
+        </th>
+        <th>
+            Inter_PassPercentage
+        </th>
+        <th>
+            Inter_PassingYear
+        </th>
+        <th>
+            CO_College1
+        </th>
+        <th>
+            Tenth_Board
+        </th>
+        <th>
+            Tenth_PassPercentage
+        </th>
+        <th>
+            Tenth_PassingYear
+        </th>
+        <th>
+            CO_College
+        </th>
+        <th>
+            AnyGaps
+        </th>
+        <th>
+            AnyBacklogs
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CA_PersonalData.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PG_Qual)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MS_StreamMaster2.StreamDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PG_PassPercentage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PG_PassingYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PG_College)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grad_Qual)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MS_StreamMaster.StreamDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grad_PassPercentage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grad_PassingYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Grad_College)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Inter_Board)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MS_StreamMaster1.StreamDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Inter_PassPercentage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Inter_PassingYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CO_College1.CollegeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tenth_Board)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tenth_PassPercentage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tenth_PassingYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CO_College.CollegeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnyGaps)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AnyBacklogs)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

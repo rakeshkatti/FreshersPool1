@@ -1,0 +1,30 @@
+﻿@model FreshersPool1.Models.EM_JobPostings_Shortlistings
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>EM_JobPostings_Shortlistings</legend>
+
+    <div class="display-label">EM_JobPostings</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EM_JobPostings.EmployerID)
+    </div>
+
+    <div class="display-label">CA_PersonalData</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CA_PersonalData.FirstName)
+    </div>
+
+    <div class="display-label">MS_ResultMaster</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MS_ResultMaster.Result)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
